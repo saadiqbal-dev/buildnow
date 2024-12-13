@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "min-h-screen bg-background antialiased"
+          "min-h-screen bg-background antialiased",
         )}
       >
         <div className="relative flex min-h-screen flex-col bg-background">
