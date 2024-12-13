@@ -12,7 +12,7 @@ export default function SiteFooter() {
           >
             Buildnow.ai
           </a>
-          .
+          . {new Date().getFullYear()} — All rights reserved.
         </p>
       </div>
     </footer>
