@@ -1,152 +1,266 @@
-"use client";
+import * as React from "react";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { CarouselCard } from "@/components/ui/carousel-card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { CarouselSlide } from "@/components/ui/types";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  // CarouselNext,
+  // CarouselPrevious,
+} from "@/components/ui/carousel";
 
-export default function DeepIntegration() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
+import { BellIcon, Share2Icon } from "lucide-react";
 
-  useEffect(() => {
-    if (!isAutoPlaying) return;
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import { AnimatedList } from "../ui/animated-list";
+import Marquee from "@/components/ui/marquee";
 
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+import { AnimatedBeamDemo } from "../ui/integration-beam";
+import { Button } from "../ui/button";
 
-    return () => clearInterval(timer);
-  }, [isAutoPlaying]);
+interface Item {
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  time: string;
+}
+let notifications = [
+  {
+    name: "Payment received",
+    description: "Magic UI",
+    time: "15m ago",
 
-  const handleNavigation = (direction: "prev" | "next") => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => {
-      if (direction === "prev") {
-        return prev === 0 ? slides.length - 1 : prev - 1;
-      }
-      return (prev + 1) % slides.length;
-    });
-  };
+    icon: "💸",
+    color: "#00C9A7",
+  },
+  {
+    name: "User signed up",
+    description: "Magic UI",
+    time: "10m ago",
+    icon: "👤",
+    color: "#FFB800",
+  },
+  {
+    name: "New message",
+    description: "Magic UI",
+    time: "5m ago",
+    icon: "💬",
+    color: "#FF3D71",
+  },
+  {
+    name: "New event",
+    description: "Magic UI",
+    time: "2m ago",
+    icon: "🗞️",
+    color: "#1E86FF",
+  },
+];
 
-  // Calculate indices for visible slides
-  const getVisibleSlides = () => {
-    const slideIndices = [];
-    for (let i = -1; i <= 1; i++) {
-      slideIndices.push((currentIndex + i + slides.length) % slides.length);
-    }
-    return slideIndices;
-  };
-
+notifications = Array.from({ length: 10 }, () => notifications).flat();
+const files = [
+  {
+    name: "training.pdf",
+    body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
+  },
+  {
+    name: "finances.xlsx",
+    body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
+  },
+  {
+    name: "logo.svg",
+    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+  },
+  {
+    name: "keys.gpg",
+    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+  },
+  {
+    name: "seed.txt",
+    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
+  },
+];
+const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
-    <section className="py-24 bg-muted/30 w-full">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center pb-16">
-          Deep Integration
-        </h2>
-
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm"
-            onClick={() => handleNavigation("prev")}
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm"
-            onClick={() => handleNavigation("next")}
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-
-          {/* Carousel Track */}
-          <div className="overflow-hidden px-4">
-            <motion.div
-              className="flex justify-center items-center gap-6"
-              initial={false}
-            >
-              <AnimatePresence mode="popLayout" initial={false}>
-                {getVisibleSlides().map((slideIndex) => (
-                  <motion.div
-                    key={slideIndex}
-                    layout
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{
-                      scale: slideIndex === currentIndex ? 1 : 0.8,
-                      opacity: slideIndex === currentIndex ? 1 : 0.5,
-                    }}
-                    exit={{ scale: 0.8, opacity: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="flex-shrink-0"
-                  >
-                    <CarouselCard
-                      slide={slides[slideIndex]}
-                      isActive={slideIndex === currentIndex}
-                      onClick={() => {
-                        setCurrentIndex(slideIndex);
-                        setIsAutoPlaying(false);
-                      }}
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
-          </div>
-
-          {/* Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-primary w-6" : "bg-primary/30"
-                }`}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setIsAutoPlaying(false);
-                }}
-              />
-            ))}
-          </div>
+    <figure
+      className={cn(
+        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
+        // animation styles
+        "transition-all duration-200 ease-in-out hover:scale-[103%]",
+        // light styles
+        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        // dark styles
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-3">
+        <div
+          className="flex size-10 items-center justify-center rounded-2xl"
+          style={{
+            backgroundColor: color,
+          }}
+        >
+          <span className="text-lg">{icon}</span>
+        </div>
+        <div className="flex flex-col overflow-hidden">
+          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
+            <span className="text-sm sm:text-lg">{name}</span>
+            <span className="mx-1">·</span>
+            <span className="text-xs text-gray-500">{time}</span>
+          </figcaption>
+          <p className="text-sm font-normal dark:text-white/60">
+            {description}
+          </p>
         </div>
       </div>
+    </figure>
+  );
+};
+
+export function AnimatedListDemo({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "relative flex max-h-[280px] w-full flex-col p-6 overflow-hidden rounded-lg  bg-muted md:shadow-xl",
+        className
+      )}
+    >
+      <AnimatedList>
+        {notifications.map((item, idx) => (
+          <Notification {...item} key={idx} />
+        ))}
+      </AnimatedList>
+    </div>
+  );
+}
+
+export function MarqueeDemo() {
+  return (
+    <Marquee
+      pauseOnHover
+      className=" [--duration:20s] max-w-[400px] max-h-[280px] bg-muted  "
+    >
+      {files.map((f, idx) => (
+        <figure
+          key={idx}
+          className={cn(
+            "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
+            "border-gray-950/[.1] bg-white hover:bg-white",
+
+            "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
+          )}
+        >
+          <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-col">
+              <figcaption className="text-sm font-medium dark:text-white ">
+                {f.name}
+              </figcaption>
+            </div>
+          </div>
+          <blockquote className="mt-2 text-xs">{f.body}</blockquote>
+        </figure>
+      ))}
+    </Marquee>
+  );
+}
+
+const features = [
+  {
+    Icon: FileTextIcon,
+    name: "Always Learning",
+    description:
+      "Learn and adapt continuously, expanding knowledge and maximizing performance with every interaction",
+    href: "#",
+    cta: "Learn more",
+    background: <MarqueeDemo />,
+  },
+  {
+    Icon: BellIcon,
+    name: "Customized to you",
+    description:
+      "Build a lasting and contextual memory, transforming past insights into future performance",
+    href: "#",
+    cta: "Learn more",
+    background: <AnimatedListDemo />,
+  },
+  {
+    Icon: Share2Icon,
+    name: "Deeply Integrated",
+    description:
+      "Orchestrate seamless interactions across your entire ecosystem",
+    href: "#",
+    cta: "Learn more",
+    background: <AnimatedBeamDemo />,
+  },
+  {
+    Icon: CalendarIcon,
+    name: "Autonomous Intelligence",
+    description:
+      "Independent, proactive, and able to execute complex tasks without supervision to drive autonomously",
+    href: "#",
+    cta: "Learn more",
+    background: (
+      <Calendar
+        mode="single"
+        selected={new Date(2022, 4, 11, 0, 0, 0)}
+        className="  rounded-md max-h-[280px] transition-all duration-300 ease-out  group-hover:scale-105"
+      />
+    ),
+  },
+];
+
+export default function CarouselSize() {
+  return (
+    <section className="flex flex-col items-center justify-center gap-12 py-16 px-4 text-center  w-full">
+      <div className="flex flex-col justify-center items-center gap-4 pb-16">
+        <h2 className="text-4xl font-semibold">
+          Deep Integration with your tools
+        </h2>
+        <p className="text-center max-w-2xl">
+          Intelligent, enterprise-ready, and seamlessly embedded in your
+          operations—digital workers bring advanced AI technology to your team,
+          scaling effortlessly to drive outcomes and push productivity.
+        </p>
+        <Button>Try it now</Button>
+      </div>
+      <Carousel
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        className="w-full items-center justify-center h-[376px]"
+      >
+        <CarouselContent>
+          {features.map((feature, index) => (
+            <CarouselItem
+              key={index}
+              className="border-none md:basis-1/2 lg:basis-1/3 items-center justify-center"
+            >
+              <div className="p-1">
+                <Card className="">
+                  <CardContent className="flex border-none  items-center justify-center p-6">
+                    <CarouselItem className="flex flex-col items-center justify-center gap-4">
+                      <div className="flex w-full bg-muted rounded-xl  items-start max-h-[300px] justify-center overflow-clip ">
+                        {feature.background}
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h2 className="text-2xl font-semibold text-center">
+                          {feature.name}
+                        </h2>
+                        <p className="text-center">{feature.description}</p>
+                      </div>
+                    </CarouselItem>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
+      </Carousel>
     </section>
   );
 }
-const slides: CarouselSlide[] = [
-  {
-    title: "Customised to you",
-    description:
-      "Build a lasting and contextual memory, transforming past insights into future performance.",
-    image:
-      "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-  {
-    title: "Deeply integrated",
-    description:
-      "Orchestrate seamless interactions across your entire tech ecosystem",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-  {
-    title: "Autonomous Intelligence",
-    description:
-      "Independent, proactive, and able to execute complex tasks without supervision to drive results and mission.",
-    image:
-      "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-  {
-    title: "Enterprise-ready",
-    description:
-      "All apps follow standard SOC 2 compliance and enterprise-grade security protocols.",
-    image:
-      "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-];

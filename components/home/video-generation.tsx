@@ -8,30 +8,43 @@ import { motion, AnimatePresence } from "motion/react";
 const features = [
   {
     id: "trainings",
-    title: "Bring Your Presentations to Life",
+    title: "Bring Your training material to Life",
     content:
       "Access ready-to-use templates for corporate training, customer onboarding, scenario-based learning, and pitch decks. Quickly transform static materials into interactive video experiences.",
     cta: "Explore Templates",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800&h=600",
+    image: "/videos/1.mp4",
   },
   {
-    id: "phone-agent",
-    title: "Your AI-Powered Call Center Assistant",
-    content:
-      "Customize your AI agent's look by selecting avatars or creating your own. Enable your AI agent to respond intelligently to calls, handle client inquiries, and adapt to business-specific needs.",
-    cta: "Set Up Your Phone Agent",
-    image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-  {
-    id: "text-agent",
-    title: "Streamlined Client Communication Made Easy",
+    id: "search",
+    title: "Instant Video Search",
     content:
       "Personalize greetings for your customers with welcome messages. Pre-configure FAQs or common questions to guide conversations effectively. Tailor responses to align with your company's tone and messaging.",
     cta: "Create Your Text Agent",
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800&h=600",
+    image: "/videos/2.mp4",
+  },
+  {
+    id: "avatars",
+    title: "Diverse AI Avatars",
+    content:
+      "Customize your AI agent's look by selecting avatars or creating your own. Enable your AI agent to respond intelligently to calls, handle client inquiries, and adapt to business-specific needs.",
+    cta: "Set Up Your Phone Agent",
+    image: "/videos/3.mp4",
+  },
+  {
+    id: "voices",
+    title: "AI Voices",
+    content:
+      "Personalize greetings for your customers with welcome messages. Pre-configure FAQs or common questions to guide conversations effectively. Tailor responses to align with your company's tone and messaging.",
+    cta: "Create Your Text Agent",
+    image: "/videos/4.mp4",
+  },
+  {
+    id: "translation",
+    title: "Translate Video into Multiple Languages",
+    content:
+      "Personalize greetings for your customers with welcome messages. Pre-configure FAQs or common questions to guide conversations effectively. Tailor responses to align with your company's tone and messaging.",
+    cta: "Create Your Text Agent",
+    image: "/videos/5.mp4",
   },
 ];
 
@@ -41,10 +54,18 @@ export function VideoGeneration() {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center pb-16">
-          Video Generation
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="flex items-center justify-center flex-col gap-4 pb-16">
+          <h2 className="text-4xl  font-semibold">Video Generation</h2>
+          <p className="max-w-2xl">
+            Use our Video Generation Tool to create Training Videos, select an
+            avatar and an AI voice that matches your requirement and easy to
+            understand for your audience.
+          </p>
+          <Button variant="outline" className="max-w-fit">
+            Try our Platform
+          </Button>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
           <div className="space-y-4">
             {features.map((feature) => (
@@ -72,10 +93,7 @@ export function VideoGeneration() {
                         <p className="text-muted-foreground mb-4">
                           {feature.content}
                         </p>
-                        <Button
-                          variant="secondary"
-                          className="bg-accent text-accent-foreground hover:bg-accent/80"
-                        >
+                        <Button className="text-accent-foreground">
                           {feature.cta}
                         </Button>
                       </motion.div>
@@ -87,21 +105,20 @@ export function VideoGeneration() {
           </div>
 
           {/* Right side - Image */}
-          <div className="relative h-[600px] rounded-lg overflow-hidden">
+          <div className="  rounded-lg justify-self-center overflow-hidden bg-black">
             <AnimatePresence mode="wait">
               {features.map(
                 (feature) =>
                   activeTab === feature.id && (
-                    <motion.img
+                    <video
                       key={feature.id}
-                      src={feature.image}
-                      alt={feature.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      initial={{ opacity: 0, scale: 1.1 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
-                    />
+                      autoPlay
+                      loop
+                      muted
+                      className="justify-self-center w-full object-cover z-0"
+                    >
+                      <source src={feature.image} type="video/mp4" />
+                    </video>
                   )
               )}
             </AnimatePresence>

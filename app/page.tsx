@@ -1,7 +1,9 @@
 import CTA from "@/components/home/cta";
-import DeepIntegration from "@/components/home/deep-integration";
+import CarouselSize from "@/components/home/deep-integration";
 import Hero from "@/components/home/hero";
 import MeetOurAIEmployees from "@/components/home/meet-our-ai-employees";
+import Platform from "@/components/home/platform";
+import { SafeSecure } from "@/components/home/safe-secure";
 import { VideoGeneration } from "@/components/home/video-generation";
 
 export default function Home() {
@@ -10,7 +12,9 @@ export default function Home() {
       <Hero />
       <VideoGeneration />
       <MeetOurAIEmployees />
-      <DeepIntegration />
+      <CarouselSize />
+      <Platform />
+      <SafeSecure />
       <CTA />
     </div>
   );
