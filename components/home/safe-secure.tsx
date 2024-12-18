@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -32,7 +31,7 @@ const features = [
     id: "governance",
     title: "Data Governance",
     content:
-      "Your data is only used for your company’s agent. We don’t use your data to train models, and we use industry standard best practices to ensure your data is secure.",
+      "Your data is only used for your company&apos;s agent. We don&apos;t use your data to train models, and we use industry standard best practices to ensure your data is secure.",
 
     image: "/videos/4.mp4",
   },
@@ -56,8 +55,8 @@ export function SafeSecure() {
           <h2 className="text-4xl  font-semibold">Safe & Secure</h2>
           <p className="max-w-2xl text-center">
             BuildNow is designed with the highest commitment to trust, security,
-            and compliance. Your AI agent won't pretend to be something it’s
-            not, and it will be honest about its limitations.
+            and compliance. Your AI agent won&apos;t pretend to be something
+            it&apos;s not, and it will be honest about its limitations.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
@@ -113,8 +112,6 @@ export function SafeSecure() {
               </div>
             ))}
           </div>
-
-          {/* Right side - Image */}
         </div>
       </div>
     </section>

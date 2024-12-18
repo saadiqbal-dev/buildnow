@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Monitor, Palette, Zap, Trophy } from "lucide-react";
+import Image from "next/image";
 
 export interface SectionData {
   id: number;
@@ -96,7 +97,7 @@ interface ImageDisplayProps {
 export function ImageDisplay({ section }: ImageDisplayProps) {
   return (
     <div className="w-full scale-75 overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out">
-      <img
+      <Image
         src={section.image}
         alt={section.title}
         className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"

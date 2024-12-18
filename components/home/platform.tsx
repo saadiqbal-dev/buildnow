@@ -1,4 +1,3 @@
-import Image from "next/image";
 import InteractiveSection from "../ui/platform-section";
 
 export default function Platform() {
@@ -13,13 +12,6 @@ export default function Platform() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center">
-        {/* <Image
-          src="/assets/dashboard.jpg"
-          className="rounded-xl border"
-          alt="dashboard"
-          width={1000}
-          height={500}
-        /> */}
         <InteractiveSection />
       </div>
     </section>
