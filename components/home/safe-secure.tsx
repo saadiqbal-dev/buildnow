@@ -74,7 +74,7 @@ export function SafeSecure() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  )
+                  ),
               )}
             </AnimatePresence>
           </div>
@@ -87,7 +87,7 @@ export function SafeSecure() {
                   className={cn(
                     "w-full text-left p-6 rounded-lg transition-all",
                     "hover:bg-muted/50 cursor-pointer",
-                    activeTab === feature.id ? "bg-muted" : "bg-transparent"
+                    activeTab === feature.id ? "bg-muted" : "bg-transparent",
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">

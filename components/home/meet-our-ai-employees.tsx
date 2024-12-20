@@ -45,21 +45,13 @@ export default function MeetOurAIEmployees() {
           done.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-24 items-start">
-        {agents.map((agent, index) => (
+      <div className="grid grid-cols-2 gap-24 items-start">
+        {agents.map((agent) => (
           <div
             key={agent.name}
-            className={cn(
-              "flex items-center gap-12 justify-center",
-              index % 2 === 1 ? "flex-row-reverse" : ""
-            )}
+            className={cn("flex items-center gap-12 justify-center")}
           >
-            <div
-              className={cn(
-                "flex",
-                index % 2 === 0 ? "justify-end" : "justify-start"
-              )}
-            >
+            <div className={cn("flex")}>
               <div className="w-full h-full overflow-clip ">
                 <video key={agent.name} autoPlay loop muted>
                   <source src={agent.video} type="video/mp4" />

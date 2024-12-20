@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,6 +21,7 @@ import Marquee from "@/components/ui/marquee";
 
 import { AnimatedBeamDemo } from "../ui/integration-beam";
 import { Button } from "../ui/button";
+import Autoplay from "embla-carousel-autoplay";
 
 interface Item {
   name: string;
@@ -92,7 +95,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
         // light styles
         "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
       <div className="flex flex-row items-center gap-3">
@@ -104,7 +107,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
         >
           <span className="text-lg">{icon}</span>
         </div>
-        <div className="flex flex-col overflow-hidden">
+        <div className="flex flex-col items-start overflow-hidden">
           <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
             <span className="text-sm sm:text-lg">{name}</span>
             <span className="mx-1">·</span>
@@ -123,8 +126,8 @@ export function AnimatedListDemo({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex max-h-[280px] w-full flex-col p-6 overflow-hidden rounded-lg  bg-muted md:shadow-xl",
-        className
+        "relative flex max-h-[280px] h-full w-full flex-col overflow-hidden rounded-lg  bg-[#0B252A] md:shadow-xl",
+        className,
       )}
     >
       <AnimatedList>
@@ -140,23 +143,21 @@ export function MarqueeDemo() {
   return (
     <Marquee
       pauseOnHover
-      className=" [--duration:20s] max-w-[400px] max-h-[280px] bg-muted  "
+      className="[--duration:20s] max-w-[400px] max-h-[280px] rounded-xl overflow-clip py-0"
     >
       {files.map((f, idx) => (
         <figure
           key={idx}
           className={cn(
             "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
-            "border-gray-950/[.1] bg-white hover:bg-white",
-
-            "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
+            "border-gray-950/[.1] bg-white",
+            "group-hover:[&:not(:hover)]:blur-[1px]",
+            "transform-gpu transition-all duration-300 ease-out hover:blur-none",
           )}
         >
           <div className="flex flex-row items-center gap-2">
             <div className="flex flex-col">
-              <figcaption className="text-sm font-medium dark:text-white ">
-                {f.name}
-              </figcaption>
+              <figcaption className="text-sm font-medium">{f.name}</figcaption>
             </div>
           </div>
           <blockquote className="mt-2 text-xs">{f.body}</blockquote>
@@ -205,7 +206,7 @@ const features = [
       <Calendar
         mode="single"
         selected={new Date(2022, 4, 11, 0, 0, 0)}
-        className="  rounded-md max-h-[280px] transition-all duration-300 ease-out  group-hover:scale-105"
+        className="  rounded-md max-h-[280px] w-full flex items-center justify-center transition-all duration-300 ease-out  group-hover:scale-105 bg-white text-primary"
       />
     ),
   },
@@ -213,7 +214,7 @@ const features = [
 
 export default function CarouselSize() {
   return (
-    <section className="flex flex-col items-center justify-center gap-12 py-16 px-4 text-center  w-full">
+    <section className="text-white flex flex-col items-center justify-center gap-12 py-16 px-4 text-center h-[100vh_-_56px] w-full bg-[#0B252A]">
       <div className="flex flex-col justify-center items-center gap-4 pb-16">
         <h2 className="text-4xl font-semibold">
           Deep Integration with your tools
@@ -230,26 +231,29 @@ export default function CarouselSize() {
           align: "center",
           loop: true,
         }}
+        plugins={[Autoplay()]}
         className="w-full items-center justify-center h-[376px]"
       >
         <CarouselContent>
           {features.map((feature, index) => (
             <CarouselItem
               key={index}
-              className="border-none md:basis-1/2 lg:basis-1/3 items-center justify-center"
+              className="border-none md:basis-1/2 lg:basis-1/3 items-center justify-center select-none"
             >
               <div className="p-1">
-                <Card className="">
+                <Card className="bg-whtie">
                   <CardContent className="flex border-none  items-center justify-center p-6">
-                    <CarouselItem className="flex flex-col items-center justify-center gap-4">
-                      <div className="flex w-full bg-muted rounded-xl  items-start max-h-[300px] justify-center overflow-clip ">
+                    <CarouselItem className="flex flex-col items-center justify-center bg-[#0B252A] gap-4">
+                      <div className="flex w-full rounded-xl  items-start max-h-[300px] h-full justify-center overflow-clip ">
                         {feature.background}
                       </div>
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="flex text-white flex-col items-center justify-center">
                         <h2 className="text-2xl font-semibold text-center">
                           {feature.name}
                         </h2>
-                        <p className="text-center">{feature.description}</p>
+                        <p className="text-center text-sm">
+                          {feature.description}
+                        </p>
                       </div>
                     </CarouselItem>
                   </CardContent>

@@ -101,6 +101,8 @@ export function ImageDisplay({ section }: ImageDisplayProps) {
         src={section.image}
         alt={section.title}
         className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+        width={2048}
+        height={2048}
       />
     </div>
   );

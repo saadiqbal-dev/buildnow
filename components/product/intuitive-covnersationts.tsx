@@ -48,22 +48,21 @@ const features = [
   },
 ];
 
-export function VideoGeneration() {
+export function IntuitiveConversations() {
   const [activeTab, setActiveTab] = useState(features[0].id);
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold">Video Generation</h2>
+          <h2 className="text-4xl  font-semibold">
+            Intuitive and authentic conversations
+          </h2>
           <p className="max-w-2xl">
-            Use our Video Generation Tool to create Training Videos, select an
-            avatar and an AI voice that matches your requirement and easy to
-            understand for your audience.
+            Your AI agent mirrors the nuances of human communication, ensuring
+            seamless and organic customer service interactions while improving
+            customer satisfaction.
           </p>
-          <Button variant="outline" className="max-w-fit">
-            Try our Platform
-          </Button>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
@@ -74,8 +73,10 @@ export function VideoGeneration() {
                   onClick={() => setActiveTab(feature.id)}
                   className={cn(
                     "w-full text-left p-6 rounded-lg transition-all",
-                    "hover:bg-muted/50 cursor-pointer",
-                    activeTab === feature.id ? "bg-muted" : "bg-transparent",
+                    "hover:bg-muted/90 cursor-pointer hover:text-black",
+                    activeTab === feature.id
+                      ? "bg-muted text-black"
+                      : "bg-transparent",
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">

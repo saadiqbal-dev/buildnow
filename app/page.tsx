@@ -1,4 +1,4 @@
-import CTA from "@/components/home/cta";
+import CTA from "@/components/cta";
 import CarouselSize from "@/components/home/deep-integration";
 import Hero from "@/components/home/hero";
 import MeetOurAIEmployees from "@/components/home/meet-our-ai-employees";
