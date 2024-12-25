@@ -65,7 +65,7 @@ export function SafeAndSecure() {
             Try our Platform
           </Button>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
           <div className="space-y-4">
             {features.map((feature) => (
@@ -77,7 +77,7 @@ export function SafeAndSecure() {
                     "hover:bg-muted/90 cursor-pointer hover:text-black",
                     activeTab === feature.id
                       ? "bg-muted text-black"
-                      : "bg-transparent",
+                      : "bg-transparent"
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">
@@ -121,7 +121,7 @@ export function SafeAndSecure() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  ),
+                  )
               )}
             </AnimatePresence>
           </div>

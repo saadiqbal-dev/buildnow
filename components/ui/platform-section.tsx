@@ -61,7 +61,7 @@ export function SectionCard({
     <div
       onClick={onClick}
       className={`
-        p-6 rounded-xl cursor-pointer transition-all duration-300
+        p-6 flex items-center rounded-xl cursor-pointer transition-all duration-300
         ${
           isSelected
             ? "bg-muted/50 text-white shadow-lg scale-105"
@@ -69,7 +69,7 @@ export function SectionCard({
         }
       `}
     >
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-center gap-3 md:mb-3">
         <div
           className={`
           ${isSelected ? "text-black" : "text-blue-500"}
@@ -78,15 +78,15 @@ export function SectionCard({
           {section.icon}
         </div>
         <h3 className="font-bold text-lg text-black">{section.title}</h3>
-      </div>
-      <p
-        className={`
+        <p
+          className={`
         text-sm leading-relaxed
-        ${isSelected ? "text-black" : "text-black"}
+        "text-black hidden md:block"
       `}
-      >
-        {section.description}
-      </p>
+        >
+          {section.description}
+        </p>
+      </div>
     </div>
   );
 }
@@ -97,7 +97,7 @@ interface ImageDisplayProps {
 
 export function ImageDisplay({ section }: ImageDisplayProps) {
   return (
-    <div className="w-full scale-75 overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out">
+    <div className="w-full my-4 mt-8 md:mt-0 md:my-0 md:scale-75 overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out">
       <Image
         src={section.image}
         alt={section.title}
@@ -116,6 +116,14 @@ export default function InteractiveSection() {
     <div className=" mx-auto px-4 ">
       <div className="flex flex-col items-center justify-center gap-4 pb-16">
         <ImageDisplay section={selectedSection} />
+        <p
+          className={`
+        text-sm leading-relaxed
+        "text-black md:hidden text-center"
+      `}
+        >
+          {sections[selectedSection.id - 1].description}
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center lg:grid-cols-4 gap-6 bg-muted/50 p-6 rounded-xl">
           {sections.map((section) => (
             <SectionCard

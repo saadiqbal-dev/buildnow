@@ -25,13 +25,13 @@ export default function AlwaysImproving() {
   return (
     <section className="py-24 mx-auto container px-4">
       <div className="flex flex-col justify-center items-center gap-4 pb-16">
-        <h2 className="text-4xl font-semibold">Always improving</h2>
+        <h2 className="text-4xl text-center font-semibold">Always improving</h2>
         <p className="text-center max-w-2xl">
           Your agent is constantly learning from interactions, continuously
           improving, and keeping your team in-the-loop.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         <video className="w-full h-full object-cover rounded-xl">
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>

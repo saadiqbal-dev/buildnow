@@ -34,7 +34,9 @@ export default function MeetOurAIEmployees() {
   return (
     <section className="py-24 mx-auto container px-4 bg-background">
       <div className="flex flex-col justify-center items-center gap-4 pb-16">
-        <h2 className="text-4xl font-semibold">Meet Our Digital Workers</h2>
+        <h2 className="text-4xl font-semibold text-center">
+          Meet Our Digital Workers
+        </h2>
         <p className="text-center max-w-2xl">
           Our digital workers are here to help you transform your contact
           center. Available 24/7 to help answer calls, train your team, and

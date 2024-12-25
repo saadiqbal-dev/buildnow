@@ -17,7 +17,7 @@ export default function SiteFooter() {
             href="/"
             className="mr-4 text-2xl flex items-center gap-2 lg:mr-6"
           >
-            <span className="font-bold text-accent">Buildnow.ai</span>
+            <span className="font-bold">Buildnow.ai</span>
           </Link>
           <p>Empowering Contact Centers with AI Precision.</p>
         </div>

@@ -1,11 +1,11 @@
 import CTA from "@/components/cta";
-import AlwaysImproving from "@/components/product/always-improving";
-import AnytimeAnywhere from "@/components/product/anytime-anywhere";
-import BeyondQNA from "@/components/product/beyond-qna";
-import Hero from "@/components/product/hero";
-import { IntuitiveConversations } from "@/components/product/intuitive-covnersationts";
-import { SafeAndSecure } from "@/components/product/safe-and-secure";
-import Testimony from "@/components/product/testimony";
+import AlwaysImproving from "@/components/video-generation/always-improving";
+import AnytimeAnywhere from "@/components/video-generation/anytime-anywhere";
+import BeyondQNA from "@/components/video-generation/beyond-qna";
+import Hero from "@/components/video-generation/hero";
+import { IntuitiveConversations } from "@/components/video-generation/intuitive-covnersationts";
+import { SafeAndSecure } from "@/components/video-generation/safe-and-secure";
+import Testimony from "@/components/video-generation/testimony";
 
 export default function ProductPage() {
   return (

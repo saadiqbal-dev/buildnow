@@ -7,6 +7,7 @@ import { Nav } from "./nav";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +39,9 @@ export default function SiteHeader() {
           className="mr-4 flex items-center gap-2 lg:mr-6"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="font-bold text-accent">Buildnow.ai</span>
+          <span className={cn(scrolled ? "text-black" : "text-white")}>
+            Buildnow.ai
+          </span>
         </Link>
 
         <div className="hidden md:block">

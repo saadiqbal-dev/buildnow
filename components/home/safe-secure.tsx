@@ -52,7 +52,7 @@ export function SafeSecure() {
     <section className="py-24 ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold">Safe & Secure</h2>
+          <h2 className="text-4xl  font-semibold text-center">Safe & Secure</h2>
           <p className="max-w-2xl text-center">
             BuildNow is designed with the highest commitment to trust, security,
             and compliance. Your AI agent won&apos;t pretend to be something
@@ -74,7 +74,7 @@ export function SafeSecure() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  ),
+                  )
               )}
             </AnimatePresence>
           </div>
@@ -87,7 +87,7 @@ export function SafeSecure() {
                   className={cn(
                     "w-full text-left p-6 rounded-lg transition-all",
                     "hover:bg-muted/50 cursor-pointer",
-                    activeTab === feature.id ? "bg-muted" : "bg-transparent",
+                    activeTab === feature.id ? "bg-muted" : "bg-transparent"
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">

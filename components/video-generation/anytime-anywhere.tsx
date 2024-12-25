@@ -37,13 +37,15 @@ export default function AnytimeAnywhere() {
   return (
     <section className="py-24 mx-auto container px-4">
       <div className="flex flex-col justify-center items-center gap-4 pb-16">
-        <h2 className="text-4xl font-semibold">Anytime and anywhere</h2>
+        <h2 className="text-4xl text-center font-semibold">
+          Anytime and anywhere
+        </h2>
         <p className="text-center max-w-2xl">
           Your AI agent is up-to-date, delivering customer service anytime and
           anywhere to dramatically lower your response time.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         <video className="w-full h-full object-cover rounded-xl">
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>

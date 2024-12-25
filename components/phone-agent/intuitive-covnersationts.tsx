@@ -55,15 +55,16 @@ export function IntuitiveConversations() {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold">
-            Video narration made easy.
+          <h2 className="text-4xl  text-center  font-semibold">
+            Intuitive and authentic conversations
           </h2>
           <p className="max-w-2xl">
-            Buildnow.ai&apos; avatar videos solve all kinds of problems for all
-            types of teams. Here are just a few examples.
+            Your AI agent mirrors the nuances of human communication, ensuring
+            seamless and organic customer service interactions while improving
+            customer satisfaction.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
           <div className="space-y-4">
             {features.map((feature) => (
@@ -75,7 +76,7 @@ export function IntuitiveConversations() {
                     "hover:bg-muted/90 cursor-pointer hover:text-black",
                     activeTab === feature.id
                       ? "bg-muted text-black"
-                      : "bg-transparent",
+                      : "bg-transparent"
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">
@@ -119,7 +120,7 @@ export function IntuitiveConversations() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  ),
+                  )
               )}
             </AnimatePresence>
           </div>

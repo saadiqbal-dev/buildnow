@@ -25,14 +25,15 @@ export default function BeyondQNA() {
   return (
     <section className="py-24 mx-auto container px-4">
       <div className="flex flex-col justify-center items-center gap-4 pb-16">
-        <h2 className="text-4xl font-semibold">Beyond Q&apos;A</h2>
+        <h2 className="text-4xl  text-center font-semibold">Beyond Q&apos;A</h2>
         <p className="text-center max-w-2xl">
-          Conversational AI isn’t just about answering questions. With Sierra,
-          your AI agent takes action to solve your customers’ problems,
-          improving self-service resolution rate and average handle time.
+          Conversational AI isn&apos;t just about answering questions. With
+          Sierra, your AI agent takes action to solve your customers&apos;
+          problems, improving self-service resolution rate and average handle
+          time.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         <video className="w-full h-full object-cover rounded-xl">
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>

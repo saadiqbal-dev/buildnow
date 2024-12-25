@@ -48,24 +48,23 @@ const features = [
   },
 ];
 
-export function SafeAndSecure() {
+export function IntuitiveConversations() {
   const [activeTab, setActiveTab] = useState(features[0].id);
 
   return (
-    <section className="py-24 bg-[#222222] text-white">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold">Safe and secure</h2>
+          <h2 className="text-4xl  text-center  font-semibold">
+            Intuitive and authentic conversations
+          </h2>
           <p className="max-w-2xl">
-            Sierra is designed with the highest commitment to trust, security,
-            and compliance. AI agents won&apos;t pretend to be something
-            they&apos;re not, and they&apos;re honest about their limitations.
+            Your AI agent mirrors the nuances of human communication, ensuring
+            seamless and organic customer service interactions while improving
+            customer satisfaction.
           </p>
-          <Button variant="default-dark" className="max-w-fit">
-            Try our Platform
-          </Button>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
           <div className="space-y-4">
             {features.map((feature) => (
@@ -77,7 +76,7 @@ export function SafeAndSecure() {
                     "hover:bg-muted/90 cursor-pointer hover:text-black",
                     activeTab === feature.id
                       ? "bg-muted text-black"
-                      : "bg-transparent",
+                      : "bg-transparent"
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">
@@ -121,7 +120,7 @@ export function SafeAndSecure() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  ),
+                  )
               )}
             </AnimatePresence>
           </div>

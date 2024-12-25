@@ -37,7 +37,7 @@ export function VideoGeneration() {
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold">
+          <h2 className="text-4xl font-semibold text-center">
             Bring Trainings to Life with Our AI Video Generator
           </h2>
           <p className="max-w-2xl">
@@ -53,7 +53,7 @@ export function VideoGeneration() {
             Try our Platform
           </Button>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center justify-center">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}
           <div className="space-y-4">
             {features.map((feature) => (
@@ -63,7 +63,7 @@ export function VideoGeneration() {
                   className={cn(
                     "w-full text-left p-6 rounded-lg transition-all",
                     "hover:bg-muted/50 cursor-pointer",
-                    activeTab === feature.id ? "bg-muted" : "bg-transparent",
+                    activeTab === feature.id ? "bg-muted" : "bg-transparent"
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">
@@ -104,7 +104,7 @@ export function VideoGeneration() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  ),
+                  )
               )}
             </AnimatePresence>
           </div>
