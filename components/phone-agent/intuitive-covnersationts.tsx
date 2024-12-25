@@ -75,7 +75,7 @@ export function IntuitiveConversations() {
                     "hover:bg-muted/90 cursor-pointer hover:text-black",
                     activeTab === feature.id
                       ? "bg-muted text-black"
-                      : "bg-transparent"
+                      : "bg-transparent",
                   )}
                 >
                   <h3 className="text-xl font-semibold mb-2">
@@ -119,7 +119,7 @@ export function IntuitiveConversations() {
                     >
                       <source src={feature.image} type="video/mp4" />
                     </video>
-                  )
+                  ),
               )}
             </AnimatePresence>
           </div>

@@ -95,7 +95,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
         // light styles
         "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
       <div className="flex flex-row items-center gap-3">
@@ -127,7 +127,7 @@ export function AnimatedListDemo({ className }: { className?: string }) {
     <div
       className={cn(
         "relative flex max-h-[280px] h-full w-full flex-col overflow-hidden rounded-lg  bg-[#0B252A] md:shadow-xl",
-        className
+        className,
       )}
     >
       <AnimatedList>
@@ -152,7 +152,7 @@ export function MarqueeDemo() {
             "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
             "border-gray-950/[.1] bg-white",
             "group-hover:[&:not(:hover)]:blur-[1px]",
-            "transform-gpu transition-all duration-300 ease-out hover:blur-none"
+            "transform-gpu transition-all duration-300 ease-out hover:blur-none",
           )}
         >
           <div className="flex flex-row items-center gap-2">

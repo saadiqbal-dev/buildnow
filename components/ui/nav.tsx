@@ -56,7 +56,7 @@ export function Nav({ textColor = "text-white" }: { textColor?: string }) {
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
-                `bg-transparent ${textColor} hover:bg-transparent hover:opacity-80`
+                `bg-transparent ${textColor} hover:bg-transparent hover:opacity-80`,
               )}
             >
               Customers
@@ -68,7 +68,7 @@ export function Nav({ textColor = "text-white" }: { textColor?: string }) {
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
-                `bg-transparent ${textColor} hover:bg-transparent hover:opacity-80`
+                `bg-transparent ${textColor} hover:bg-transparent hover:opacity-80`,
               )}
             >
               Company
@@ -91,7 +91,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             `block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-black hover:text-accent-foreground`,
-            className
+            className,
           )}
           {...props}
         >

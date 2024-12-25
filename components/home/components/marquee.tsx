@@ -21,7 +21,7 @@ const ReviewCard = ({ body }: { body: string }) => {
   return (
     <figure
       className={cn(
-        "relative flex-shrink-0 p-4 cursor-pointer flex items-center justify-center overflow-hidden rounded-xl border bg-white"
+        "relative flex-shrink-0 p-4 cursor-pointer flex items-center justify-center overflow-hidden rounded-xl border bg-white",
       )}
     >
       <blockquote className="flex-shrink-0">{body}</blockquote>
