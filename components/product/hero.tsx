@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative flex flex-col items-center justify-center gap-12 py-16 px-4 text-center h-[calc(100vh_-_56px)] w-full">
       <div className="flex items-center flex-col gap-4 z-10 text-white">
         <h2 className="font-bold text-5xl max-w-5xl">
-          Transform customer service with conversational AI.
+          Transform Your Contact Center with Digital Workers
         </h2>
         <h2 className="font-semibold text-2xl">
           Delight your customers while dramatically improving business outcomes.

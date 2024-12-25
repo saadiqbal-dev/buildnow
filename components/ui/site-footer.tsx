@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function SiteFooter() {
   return (
     <footer className="border-t border-border/40 py-6 md:px-8 md:py-0">
-      <div className="container mx-auto justify-between py-12 flex gap-2">
+      <div className="container mx-auto justify-between py-12 flex flex-col md:flex-row px-4 md:px-0  gap-8 md:gap-2">
         <div className="flex flex-col items-start gap-2">
           <Link
             href="/"

@@ -21,15 +21,16 @@ export const sections: SectionData[] = [
   {
     id: 1,
     title: "Video Generation",
-    description: "Generate Training Videos with simple steps.",
+    description:
+      "Create training videos your team will actually watch! Use our video generation platform to turn text into videos with AI avatars and voiceovers in 100+ languages.",
     image: "/assets/video-generation.jpg",
     icon: <Monitor className="w-6 h-6" />,
   },
   {
     id: 2,
-    title: "Video Search",
+    title: "Instant Video Answers",
     description:
-      "Implementing innovative solutions to complex problems through creative thinking and cutting-edge technology.",
+      "Whenever an employee asks a question, they get an instant video answer guiding them in the right direction.",
     image: "/assets/video-search.jpg",
     icon: <Palette className="w-6 h-6" />,
   },
@@ -37,7 +38,7 @@ export const sections: SectionData[] = [
     id: 3,
     title: "AI Trainer",
     description:
-      "Optimizing performance to deliver lightning-fast experiences that keep users engaged and satisfied.",
+      "Coach your workforce using on-demand AI roleplays that replicate client calls.",
     image: "/assets/ai-trainer.jpg",
     icon: <Zap className="w-6 h-6" />,
   },
@@ -45,7 +46,7 @@ export const sections: SectionData[] = [
     id: 4,
     title: "AI Phone Agent",
     description:
-      "Recognized excellence in delivering outstanding digital experiences that set new industry standards.",
+      "Create custom Voice AI Agents that can handle lead qualification, customer support, and receptionist tasks - all tailored to your unique needs. They learn from every call, adapt to your business, and transform how you deliver customer service.",
     image: "/assets/phone-agents.png",
     icon: <Trophy className="w-6 h-6" />,
   },
@@ -115,7 +116,7 @@ export default function InteractiveSection() {
     <div className=" mx-auto px-4 ">
       <div className="flex flex-col items-center justify-center gap-4 pb-16">
         <ImageDisplay section={selectedSection} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-muted/50 p-6 rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-center lg:grid-cols-4 gap-6 bg-muted/50 p-6 rounded-xl">
           {sections.map((section) => (
             <SectionCard
               key={section.id}

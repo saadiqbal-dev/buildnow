@@ -1,12 +1,9 @@
-import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center gap-12 py-16 px-4 text-center h-[calc(100vh_-_56px)] w-full">
-      <AnimatedGradientText className="z-10 bg-black/10 text-white">
+    <section className="relative flex flex-col items-start justify-center gap-12 py-16 px-16 h-[calc(100vh_+_56px)] w-full">
+      {/* <AnimatedGradientText className="z-10 bg-black/10 text-white">
         🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
         <span
           className={cn(
@@ -16,20 +13,22 @@ export default function Hero() {
           Introducing BuildNow v2.0
         </span>
         <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-      </AnimatedGradientText>
+      </AnimatedGradientText> */}
 
-      <div className="flex items-center flex-col gap-4 z-10 text-white">
-        <h1 className="font-bold text-6xl">Buildnow.ai</h1>
-        <h2 className="font-semibold text-4xl">
-          AI-Ehnanced Workflow for Call Centers
+      <div className="flex items-start flex-col gap-4 z-10 text-white">
+        {/* <h1 className="font-bold text-6xl">Buildnow.ai</h1> */}
+        <h2 className="font-semibold md:text-8xl text-4xl">
+          AI-Enhanced Workforce
+          <br /> for Contact Centers
         </h2>
-        <p className="font-medium text-muted">
-          Digital Workers That Train Your Team, Provide Video Answers, And Make
+        <div className="w-full h-[2px] bg-muted/50" />
+        <p className="font-medium md:text-[28px] text-xl text-muted ">
+          Digital Workers That Train, Provide Video Answers, and Even Make
           Calls!
         </p>
       </div>
 
-      <Button size="lg" className="z-10">
+      <Button size="lg" className="z-10 px-8">
         Get Started
       </Button>
       <video
