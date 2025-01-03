@@ -1,68 +1,110 @@
-import {
-  Calendar,
-  CalendarCheck,
-  ChartLine,
-  MessageSquare,
-  Users,
-} from "lucide-react";
+"use client";
 
-const sections = [
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Globe, Mic, Users, ChevronRight } from "lucide-react";
+import React from "react";
+import { Button } from "../ui/button";
+
+const features = [
   {
-    icon: Calendar,
-    title: "Around-the-clock",
+    icon: Globe,
+    title: "Translate Effortlessly",
     description:
-      "AI agents are available to handle customers' questions any time of day. Customers can put the conversation on hold if life takes them elsewhere, and your agent can pick up where they left off, later.",
+      "Convert your videos into over 100+ languages in minutes, breaking down language barriers with ease.",
   },
   {
-    icon: MessageSquare,
-    title: "Connect across channels",
+    icon: Mic,
+    title: "Localized Voiceovers",
     description:
-      "Whether they're at home or on the go, offer your customers the convenience of support through both chat and voice.",
+      "Choose the perfect voice for each region, ensuring cultural relevance and authenticity in your training materials.",
   },
   {
-    icon: CalendarCheck,
-    title: "Always-ready",
+    icon: Users,
+    title: "Global Scalability",
     description:
-      "AI agents are easy and low-cost to update, whether there is a new product to highlight, a new promotion to offer, or a new policy to follow.",
-  },
-  {
-    icon: ChartLine,
-    title: "Scalable",
-    description:
-      "When you experience surges in consumer demand, Sierra scales up effortlessly, ensuring a smooth experience with plenty of capacity.",
+      "Reach employees worldwide without compromising on quality or consistency, scaling your training efforts effortlessly.",
   },
 ];
 
-export default function AnytimeAnywhere() {
+export default function AITranslationInteractive() {
+  const [activeFeature, setActiveFeature] = useState(0);
+
   return (
-    <section className="py-24 mx-auto container px-4">
-      <div className="flex flex-col justify-center items-center gap-4 pb-16">
-        <h2 className="text-4xl text-center font-semibold">
-          Anytime and anywhere
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-8 text-black">
+          Break Language Barriers with AI Translation
         </h2>
-        <p className="text-center max-w-2xl">
-          Your AI agent is up-to-date, delivering customer service anytime and
-          anywhere to dramatically lower your response time.
-        </p>
-      </div>
-      <div className="grid md:grid-cols-2 gap-6">
-        <video className="w-full h-full object-cover rounded-xl">
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
-        <div className="flex flex-col gap-3">
-          {sections.map((section) => (
-            <div
-              key={section.title}
-              className="flex flex-col gap-2 p-6 rounded-xl"
-            >
-              <div className="flex items-center gap-3">
-                <section.icon className="w-6 h-6" />
-                <h3 className="font-bold text-lg">{section.title}</h3>
-              </div>
-              <p className="text-sm leading-relaxed">{section.description}</p>
+
+        <div className="relative mb-20">
+          <div className="absolute inset-0 flex items-center justify-center opacity-10"></div>
+
+          <div className="relative z-10 flex gap-9 flex-col md:flex-row items-center justify-between">
+            <div className="w-full md:w-1/2 mb-10 md:mb-0">
+              <AnimatePresence mode="wait">
+                <div
+                  key={activeFeature}
+                  className="bg-white p-8 rounded-lg shadow-lg"
+                >
+                  {React.createElement(features[activeFeature].icon, {
+                    className: "w-16 h-16 text-blue-500 mb-4",
+                  })}
+                  <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                    {features[activeFeature].title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {features[activeFeature].description}
+                  </p>
+                </div>
+              </AnimatePresence>
             </div>
-          ))}
+
+            <div className="w-full md:w-1/2">
+              <div className="space-y-4">
+                {features.map((feature, index) => (
+                  <motion.button
+                    key={index}
+                    className={`w-full text-left p-4 rounded-lg transition-colors ${
+                      index === activeFeature
+                        ? "bg-blue-100 text-black"
+                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                    }`}
+                    onClick={() => setActiveFeature(index)}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium">{feature.title}</span>
+                      <ChevronRight
+                        className={`w-5 h-5 transition-transform ${
+                          index === activeFeature ? "transform rotate-90" : ""
+                        }`}
+                      />
+                    </div>
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
+
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">
+            Experience the Power of AI Translation
+          </h3>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Foster inclusivity, save time and costs, and enhance collaboration
+            across your global teams. Unlock the potential of borderless
+            communication in your training programs.
+          </p>
+          <Button>Translate Your Trainings Now</Button>
+        </motion.div>
       </div>
     </section>
   );

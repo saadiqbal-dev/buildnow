@@ -1,24 +1,42 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center gap-12 py-16 px-4 text-center h-[calc(100vh_-_56px)] w-full">
-      <div className="flex items-center flex-col gap-4 z-10 text-white">
-        <h2 className="font-bold text-5xl max-w-5xl">
-          Transform Your Contact Center with Digital Workers
+    <section className="relative flex flex-col items-start justify-center gap-12 py-16 px-16 h-[calc(100vh_+_56px)] w-full">
+      {/* <AnimatedGradientText className="z-10 bg-black/10 text-white">
+        🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+        <span
+          className={cn(
+            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+          )}
+        >
+          Introducing BuildNow v2.0
+        </span>
+        <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+      </AnimatedGradientText> */}
+
+      <div className="flex items-start flex-col gap-4 z-10 text-white">
+        {/* <h1 className="font-bold text-6xl">Buildnow.ai</h1> */}
+        <h2 className="font-semibold md:text-8xl text-4xl">
+          Turn Text To Video, in Minutes
         </h2>
-        <h2 className="font-semibold text-2xl">
-          Delight your customers while dramatically improving business outcomes.
-        </h2>
-        <Button size="lg">Watch Demo</Button>
+        <div className="w-full h-[2px] bg-muted/50" />
+        <p className="font-medium md:text-[28px] text-xl text-muted ">
+          Bring Training to Life with our AI Video Generator
+        </p>
       </div>
+
+      <Button size="lg" className="z-10 px-8">
+        Try Our Platform Now
+      </Button>
       <video
         autoPlay
         loop
         muted
+        controls={false}
         className="absolute left-0 top-0 w-full h-[calc(100vh_-_56px)] object-cover z-0"
       >
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
     </section>
   );

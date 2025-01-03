@@ -38,7 +38,7 @@ export default function Hero() {
         controls={false}
         className="absolute left-0 top-0 w-full h-[calc(100vh_-_56px)] object-cover z-0"
       >
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
     </section>
   );
