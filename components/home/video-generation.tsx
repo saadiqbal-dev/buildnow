@@ -40,18 +40,13 @@ export function VideoGeneration() {
           <h2 className="text-4xl font-semibold text-center">
             Bring Trainings to Life with Our AI Video Generator
           </h2>
-          <p className="max-w-2xl">
+          <p className="max-w-2xl text-center">
             Create training videos your team will actually watch! Use our video
             generation platform to turn text into videos with AI avatars and
             voiceovers in 100+ languages. Say goodbye to dull, text-heavy
             documents once and for all.
           </p>
-          <Button
-            variant="outline"
-            className="max-w-fit hover:bg-black transition-colors duration-300 ease-in-out"
-          >
-            Try our Platform
-          </Button>
+          <Button className="max-w-fi">Try our Platform</Button>
         </div>
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center justify-center">
           {/* Left side - Tabs */}

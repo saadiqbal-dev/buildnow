@@ -3,6 +3,7 @@ import {
   Instagram,
   MailOpen,
   Phone,
+  Linkedin,
   Twitter,
   Youtube,
 } from "lucide-react";
@@ -17,9 +18,9 @@ export default function SiteFooter() {
             href="/"
             className="mr-4 text-2xl flex items-center gap-2 lg:mr-6"
           >
-            <span className="font-bold">Buildnow.ai</span>
+            <span className="font-bold">Buildnow AI</span>
           </Link>
-          <p>Empowering Contact Centers with AI Precision.</p>
+          <p>AI-Enhanced Workforce for Contact Centers</p>
         </div>
         <div className="flex flex-col items-start gap-2">
           <h2 className="text-xl font-semibold">Quick Links</h2>
@@ -28,16 +29,19 @@ export default function SiteFooter() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/platform">Platform</Link>
+              <Link href="/platform/video-generation">Video Generation</Link>
             </li>
             <li>
-              <Link href="/product">Product</Link>
+              <Link href="/platform/ai-phone-agent">AI Phone Agent</Link>
             </li>
             <li>
-              <Link href="/company">Company</Link>
+              <Link href="/platform/ai-trainer">AI Trainer</Link>
             </li>
             <li>
               <Link href="/customers">Customers</Link>
+            </li>
+            <li>
+              <Link href="/company">Company</Link>
             </li>
           </ul>
         </div>
@@ -48,9 +52,9 @@ export default function SiteFooter() {
               href="#"
               className="hover:text-accent transition-all duration-300 ease-in-out rounded-full p-3 border"
             >
-              <Twitter />
+              <Linkedin />
             </Link>
-            <Link
+            {/* <Link
               href="#"
               className="hover:text-accent transition-all duration-300 ease-in-out rounded-full p-3 border"
             >
@@ -67,7 +71,7 @@ export default function SiteFooter() {
               className="hover:text-accent transition-all duration-300 ease-in-out rounded-full p-3 border"
             >
               <Youtube />
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col gap-3 mt-4">
             <h2 className="text-xl font-semibold">Contact Us</h2>
@@ -76,14 +80,14 @@ export default function SiteFooter() {
                 href="#"
                 className="flex items-center gap-2 hover:text-accent transition-all duration-300 ease-in-out"
               >
-                <MailOpen className="size-4" /> email@email.com
+                <MailOpen className="size-4" /> support@buildnow.ai
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="flex items-center gap-2 hover:text-accent transition-all duration-300 ease-in-out"
               >
                 <Phone className="size-4" /> +1 (555) 555-5555
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

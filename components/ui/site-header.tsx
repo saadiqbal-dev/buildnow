@@ -49,7 +49,9 @@ export default function SiteHeader() {
         </div>
 
         {/* CTA */}
-        <Button className="hidden md:block">Get Started Today</Button>
+        <Button className="hidden md:block text-black bg-white border-black hover:text-white">
+          Get Started Today
+        </Button>
 
         <div className="md:hidden">
           <Button size="icon" onClick={() => setMenuOpen(!menuOpen)}>

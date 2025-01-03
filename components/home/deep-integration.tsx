@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
-import { BellIcon, Share2Icon } from "lucide-react";
+import { BellIcon, Icon, Share2Icon, UsersIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
@@ -170,18 +170,18 @@ export function MarqueeDemo() {
 const features = [
   {
     Icon: FileTextIcon,
-    name: "Always Learning",
+    name: "Reinforcement Fine-Tuning",
     description:
-      "Learn and adapt continuously, expanding knowledge and maximizing performance with every interaction",
+      "Learning from every interaction, adapting to meet your organization’s objectives.",
     href: "#",
     cta: "Learn more",
     background: <MarqueeDemo />,
   },
   {
     Icon: BellIcon,
-    name: "Customized to you",
+    name: "Human in the loop",
     description:
-      "Build a lasting and contextual memory, transforming past insights into future performance",
+      "Easily route challenging tasks to humans and refine AI performance over time.",
     href: "#",
     cta: "Learn more",
     background: <AnimatedListDemo />,
@@ -190,16 +190,25 @@ const features = [
     Icon: Share2Icon,
     name: "Deeply Integrated",
     description:
-      "Orchestrate seamless interactions across your entire ecosystem",
+      "Seamlessly integrate with your tech stack, connecting to any CRM or telephony.",
+    href: "#",
+    cta: "Learn more",
+    background: <AnimatedBeamDemo />,
+  },
+  {
+    Icon: UsersIcon,
+    name: "Autonomous Intelligence",
+    description:
+      "Autonomous agents collaborate seamlessly to execute complex tasks and drive results.",
     href: "#",
     cta: "Learn more",
     background: <AnimatedBeamDemo />,
   },
   {
     Icon: CalendarIcon,
-    name: "Autonomous Intelligence",
+    name: "Enterprise Ready",
     description:
-      "Independent, proactive, and able to execute complex tasks without supervision to drive autonomously",
+      "Built-in guardrails ensure AI is trustworthy and always in compliance with your standards.",
     href: "#",
     cta: "Learn more",
     background: (

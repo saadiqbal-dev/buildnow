@@ -67,7 +67,7 @@ export default function MeetOurAIEmployees() {
               <h3 className="text-2xl font-bold">
                 {agent.name} - {agent.tagline}
               </h3>
-              <ul className="flex flex-col max-w-xl gap-2">
+              <ul className="flex flex-col max-w-xl gap-2 text-center">
                 {agent.qualities.map((quality, index) => (
                   <li key={index}> {quality}</li>
                 ))}

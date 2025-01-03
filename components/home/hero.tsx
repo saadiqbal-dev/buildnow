@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-start justify-center gap-12 py-16 px-16 h-[calc(100vh_+_56px)] w-full">
+    <section className="relative flex flex-col items-start justify-center gap-12 py-16 px-16 min-h-screen w-full">
       {/* <AnimatedGradientText className="z-10 bg-black/10 text-white">
         🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
         <span
@@ -28,7 +28,10 @@ export default function Hero() {
         </p>
       </div>
 
-      <Button size="lg" className="z-10 px-8">
+      <Button
+        size="lg"
+        className="z-10 px-8 text-black bg-white border-black hover:text-white"
+      >
         Get Started
       </Button>
       <video

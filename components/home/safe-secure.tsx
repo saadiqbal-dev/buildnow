@@ -9,21 +9,21 @@ const features = [
     id: "supervision",
     title: "Supervision",
     content:
-      "Guardrails ensure your agent stays on-topic, and real-time monitoring tracks live interactions.",
+      "Built-in guardrails keep AI on-topic, while real-time monitoring provides visibility into every interaction.",
     image: "/videos/1.mp4",
   },
   {
     id: "secure",
     title: "Secure Integration",
     content:
-      "AI may be flexible, but security standards should not be. When AI accesses your systems of record, those interactions are deterministic and controlled to ensure your AI always follows your policies and security procedures.",
+      "AI must be adaptable, but security should never be compromised. Built with SOC 2 compliance in mind, all interactions with your systems of record are deterministic and tightly controlled, ensuring adherence to your policies and robust security protocols.",
     image: "/videos/2.mp4",
   },
   {
-    id: "auditing",
-    title: "Auditing",
+    id: "observation",
+    title: "Observability & Auditing",
     content:
-      "Built-in quality assurance workflows ensure your customer experience team can understand the reasoning behind every AI interaction.",
+      "Comprehensive quality assurance workflows provide full visibility into AI operations, ensuring your team can trace, understand, and evaluate the reasoning behind every AI decision and interaction.",
 
     image: "/videos/3.mp4",
   },
@@ -31,15 +31,15 @@ const features = [
     id: "governance",
     title: "Data Governance",
     content:
-      "Your data is only used for your company&apos;s agent. We don&apos;t use your data to train models, and we use industry standard best practices to ensure your data is secure.",
+      "Your data is exclusively used for your organization’s AI solutions. We never use your data to train external models and follow industry-leading best practices to ensure its security and integrity.",
 
     image: "/videos/4.mp4",
   },
   {
     id: "privacy",
-    title: "Privacy",
+    title: "Privacy - PII Redaction",
     content:
-      "Personally identifiable information is automatically encrypted and masked.",
+      "Personally identifiable information (PII) is automatically identified, encrypted, and masked, ensuring sensitive data remains protected at every step.",
 
     image: "/videos/5.mp4",
   },
@@ -52,11 +52,13 @@ export function SafeSecure() {
     <section className="py-24 ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col gap-4 pb-16">
-          <h2 className="text-4xl  font-semibold text-center">Safe & Secure</h2>
+          <h2 className="text-4xl  font-semibold text-center">
+            Enterprise-Grade Security and Trust
+          </h2>
           <p className="max-w-2xl text-center">
-            BuildNow is designed with the highest commitment to trust, security,
-            and compliance. Your AI agent won&apos;t pretend to be something
-            it&apos;s not, and it will be honest about its limitations.
+            Buildnow AI is built with security, compliance, and trust at its
+            foundation, ensuring AI systems are transparent and aligned with
+            your values.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center justify-center">

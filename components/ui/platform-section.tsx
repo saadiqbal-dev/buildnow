@@ -124,7 +124,7 @@ export default function InteractiveSection() {
         >
           {sections[selectedSection.id - 1].description}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-center lg:grid-cols-4 gap-6 bg-muted/50 p-6 rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-center lg:grid-cols-4 gap-6 bg-[#D7CECC] p-6 rounded-3xl">
           {sections.map((section) => (
             <SectionCard
               key={section.id}

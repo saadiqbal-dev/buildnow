@@ -10,7 +10,7 @@ const reviews = [
   { body: "Human in Loop" },
   { body: "Save Time" },
   { body: "Faster Resolutions" },
-  { body: "Instant Video" },
+  { body: "Instant Video Answers" },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
@@ -21,7 +21,7 @@ const ReviewCard = ({ body }: { body: string }) => {
   return (
     <figure
       className={cn(
-        "relative flex-shrink-0 p-4 cursor-pointer flex items-center justify-center overflow-hidden rounded-xl border bg-white",
+        "relative flex-shrink-0 p-4 cursor-pointer flex items-center justify-center overflow-hidden rounded-xl border bg-white"
       )}
     >
       <blockquote className="flex-shrink-0">{body}</blockquote>
@@ -33,7 +33,7 @@ export function MarqueeDemo() {
   return (
     <div className="relative mt-4 mb-24 flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-[#d7cecc]">
       <div>
-        <Marquee pauseOnHover className="[--duration:80s] flex-shrink-0">
+        <Marquee pauseOnHover className="[--duration:30s] flex-shrink-0">
           {firstRow.map((review) => (
             <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
@@ -41,13 +41,13 @@ export function MarqueeDemo() {
         <Marquee
           reverse
           pauseOnHover
-          className="[--duration:80s] flex-shrink-0"
+          className="[--duration:30s] flex-shrink-0"
         >
           {secondRow.map((review) => (
             <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
         </Marquee>
-        <Marquee pauseOnHover className="[--duration:80s] flex-shrink-0">
+        <Marquee pauseOnHover className="[--duration:30s] flex-shrink-0">
           {thirdRow.map((review) => (
             <ReviewCard key={`${review.body}-${Math.random()}`} {...review} />
           ))}
