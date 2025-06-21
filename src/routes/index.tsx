@@ -1,0 +1,20 @@
+import { createFileRoute } from '@tanstack/react-router'
+import HeroSection from '@/components/HeroSection'
+import TrustedBySection from '@/components/TrustedBySection'
+import UseCasesSection from '@/components/UseCasesSection'
+import IntegrationsSection from '@/components/IntegrationsSection'
+
+export const Route = createFileRoute('/')({
+  component: Index,
+})
+
+function Index() {
+  return (
+    <>
+      <HeroSection />
+      <TrustedBySection />
+      <UseCasesSection />
+      <IntegrationsSection />
+    </>
+  )
+}
