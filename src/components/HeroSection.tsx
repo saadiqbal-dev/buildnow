@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Threads from "./ui/threads";
-import DashboardImage from "@/assets/dashboard.png";
+import DashboardImage from "/assets/dashboard.png";
 
 export default function HeroSection() {
   return (
@@ -19,13 +19,9 @@ export default function HeroSection() {
 
         <div className="max-w-4xl mx-auto min-h-screen items-center flex flex-col justify-center text-center">
           {/* Main headline */}
-          <h1 className="text-5xl relative z-50 md:text-6xl font-bold text-white mb-6 leading-tight">
-            <span className="text-black">Buildnow AI</span>
-            <br />
-            <span className="text-black">
-              Help you Build your Team of{" "}
-              <span className="text-black">AI Voice Agents</span>
-            </span>
+          <h1 className="text-5xl relative z-50 md:text-6xl font-bold text-black mb-6 leading-tight">
+            Help you Build your Team of{" "}
+            <span className="text-black">AI Voice Agents</span>
           </h1>
 
           {/* Subtitle */}
