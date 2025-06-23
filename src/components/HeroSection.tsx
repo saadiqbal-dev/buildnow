@@ -4,7 +4,7 @@ import DashboardImage from "/assets/dashboard.png";
 
 export default function HeroSection() {
   return (
-    <section className=" min-h-screen flex flex-col gap-6 items-center justify-center overflow-hidden bg-accent">
+    <section className=" min-h-screen flex flex-col gap-6 items-center justify-center overflow-hidden bg-[#FFFDF5]">
       {/* Threads background animation */}
 
       {/* Main content */}
