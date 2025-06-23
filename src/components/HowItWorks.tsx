@@ -49,7 +49,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.step}
-              className="flex flex-col items-start p-8 border-2 border-black  bg-white rounded-lg"
+              className="flex flex-col items-start p-8  bg-white rounded-lg"
             >
               <div className="text-black justify-center text-7xl font-light">
                 {step.step}

@@ -4,7 +4,7 @@ import DashboardImage from "/assets/dashboard.png";
 
 export default function HeroSection() {
   return (
-    <section className=" min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className=" min-h-screen flex flex-col gap-6 items-center justify-center overflow-hidden bg-accent">
       {/* Threads background animation */}
 
       {/* Main content */}
@@ -17,15 +17,15 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="max-w-4xl mx-auto min-h-screen items-center flex flex-col justify-center text-center">
+        <div className="max-w-4xl mx-auto pt-[150px] items-center flex flex-col justify-center text-center">
           {/* Main headline */}
-          <h1 className="text-5xl relative z-50 md:text-6xl font-bold text-black mb-6 leading-tight">
-            Help you Build your Team of{" "}
+          <h1 className="text-4xl relative z-50 md:text-5xl font-bold text-black mb-6 leading-tight">
+            Build your Team of{" "}
             <span className="text-black">AI Voice Agents</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl relative z-50 md:text-2xl text-black mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl relative z-50 md:text-lg text-black mb-8 max-w-3xl mx-auto leading-relaxed">
             AI customer service platform to augment your CX teams with AI Voice
             agents & AI Video Trainings. Better customer experiences while
             reducing costs.

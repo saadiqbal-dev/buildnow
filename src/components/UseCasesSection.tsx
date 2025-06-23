@@ -1,48 +1,50 @@
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2 } from "lucide-react";
+import { Play, Pause, Volume2, File, Calendar } from "lucide-react";
 
 const useCases = [
   {
     id: 1,
     title: "Receptionist",
-    description:
-      "Professional phone answering service that handles calls 24/7, routes inquiries, and manages basic customer interactions.",
+    description: "Law firm receptionist",
     audioUrl: "/audio/receptionist-demo.mp3",
+    icon: <File />,
   },
   {
     id: 2,
-    title: "Appointment Setter",
-    description:
-      "Automated booking system that schedules appointments, manages calendars, and sends confirmations to customers.",
+    title: "Scheduling Appointments",
+    description: "Real estate warehouse booking, we saw you expressed interest",
     audioUrl: "/audio/appointment-demo.mp3",
+    icon: <Calendar />,
   },
   {
     id: 3,
     title: "Lead Qualification",
-    description:
-      "Intelligent screening system that qualifies prospects, gathers information, and routes high-quality leads to your sales team.",
+    description: "PI Law firm",
     audioUrl: "/audio/lead-qualification-demo.mp3",
+    icon: <File />,
   },
   {
     id: 4,
-    title: "Survey",
+    title: "Outbound Sales",
     description:
-      "Interactive survey conductor that collects feedback, conducts market research, and gathers valuable customer insights.",
-    audioUrl: "/audio/survey-demo.mp3",
+      "Hey wanted check if you wanted to upgrade service for another month",
+    audioUrl: "/audio/outbound-demo.mp3",
+    icon: <File />,
   },
   {
     id: 5,
-    title: "Customer Service",
+    title: "Surveys",
     description:
-      "Comprehensive support agent that handles inquiries, resolves issues, and provides instant assistance to customers.",
-    audioUrl: "/audio/customer-service-demo.mp3",
+      "Hey how are you liking the service we provided? Would you recommend us to friends",
+    audioUrl: "/audio/survey-demo.mp3",
+    icon: <File />,
   },
   {
     id: 6,
     title: "Debt Collection",
-    description:
-      "Professional collection agent that handles payment reminders, negotiates payment plans, and maintains compliance.",
+    description: "Utilities negotiate payment",
     audioUrl: "/audio/debt-collection-demo.mp3",
+    icon: <File />,
   },
 ];
 
@@ -158,39 +160,11 @@ function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
 }
 
 export default function UseCasesSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % useCases.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const nextSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev + 1) % useCases.length);
-  };
-
-  const prevSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + useCases.length) % useCases.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(index);
-  };
+  const [selectedUseCase, setSelectedUseCase] = useState(useCases[0]);
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-
-      <div className=" mx-auto flex flex-col items-center px-4 relative">
+      <div className="max-w-7xl mx-auto flex flex-col items-center px-4 relative">
         <div className="px-3 py-2 rounded-full bg-[#E3E0DC] text-gray-800 text-sm font-medium mb-8 inline-block">
           <p>Use Cases</p>
         </div>
@@ -200,112 +174,53 @@ export default function UseCasesSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your team of AI Phone Agents is available 24/7 to solve problems,
-            provide answers, and take action.{" "}
+            provide answers, and take action.
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden rounded-2xl">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {useCases.map((useCase) => (
-                <div key={useCase.id} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white border-2 border-black rounded-2xl p-8 shadow-lg transform transition-all duration-300">
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      {/* Content */}
-                      <div className="text-black">
-                        <div className="flex items-center gap-4 mb-6">
-                          <h3 className="text-3xl font-bold">
-                            {useCase.title}
-                          </h3>
-                        </div>
-                        <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                          {useCase.description}
-                        </p>
-
-                        {/* Features list */}
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-black rounded-full" />
-                            <span className="text-sm text-gray-800">
-                              24/7 Availability
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-black rounded-full" />
-                            <span className="text-sm text-gray-800">
-                              Natural Conversations
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-black rounded-full" />
-                            <span className="text-sm text-gray-800">
-                              Instant Response
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Audio Player */}
-                      <div className="bg-gray-100 border border-gray-300 rounded-xl p-6">
-                        <h4 className="text-black font-semibold mb-4 text-center">
-                          Listen to a Live Demo
-                        </h4>
-                        <AudioPlayer
-                          audioUrl={useCase.audioUrl}
-                          title={useCase.title}
-                        />
-                      </div>
-                    </div>
-                  </div>
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start h-full">
+          {/* Left Side - Use Cases Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {useCases.map((useCase) => (
+              <div
+                key={useCase.id}
+                onClick={() => setSelectedUseCase(useCase)}
+                className={`cursor-pointer p-8 flex items-center justify-center rounded-xl border-2 transition-all duration-300 hover:shadow-lg ${
+                  selectedUseCase.id === useCase.id
+                    ? "border-black bg-black text-white"
+                    : "border-gray-200 bg-white text-black hover:border-gray-300"
+                }`}
+              >
+                <div className="flex flex-col gap-1 items-center">
+                  {useCase.icon && (
+                    <span className="inline-block mr-2">{useCase.icon}</span>
+                  )}
+                  <h3 className="text-md font-light text-center px-4">
+                    {useCase.title}
+                  </h3>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute -left-10 top-1/2 -translate-y-1/2 w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors group"
-          >
-            <ChevronLeft className="w-6 h-6 text-white group-hover:text-white/90" />
-          </button>
+          {/* Right Side - Audio Player */}
+          <div className="lg:sticky lg:top-8 h-full">
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 h-full flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-black mb-4">
+                {selectedUseCase.title}
+              </h3>
+              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                {selectedUseCase.description}
+              </p>
 
-          <button
-            onClick={nextSlide}
-            className="absolute -right-10 top-1/2 -translate-y-1/2 w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors group"
-          >
-            <ChevronRight className="w-6 h-6 text-white group-hover:text-white/90" />
-          </button>
+              <AudioPlayer
+                audioUrl={selectedUseCase.audioUrl}
+                title={selectedUseCase.title}
+              />
+            </div>
+          </div>
         </div>
-
-        {/* Dot Indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {useCases.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-black scale-125"
-                  : "bg-gray-400 hover:bg-gray-600"
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Auto-play indicator */}
-        {/* <div className="text-center mt-6">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-gray-600 hover:text-black text-sm transition-colors"
-          >
-            {isAutoPlaying ? "Pause Auto-play" : "Resume Auto-play"}
-          </button>
-        </div> */}
       </div>
 
       <style>{`
