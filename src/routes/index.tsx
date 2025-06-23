@@ -15,8 +15,8 @@ function Index() {
       <HeroSection />
       <TrustedBySection />
       <UseCasesSection />
-      <AiVideoTrainerSection />
       <IntegrationsSection />
+      <AiVideoTrainerSection />
     </>
   );
 }
