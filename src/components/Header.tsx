@@ -44,12 +44,18 @@ const Routes = [
     ],
   },
   {
-    title: "Company",
-    slug: "/company",
-  },
-  {
     title: "Pricing",
     slug: "/pricing",
+  },
+  {
+    title: "Resources",
+    slug: "/resources",
+    children: [
+      {
+        title: "Company",
+        slug: "/resources/company",
+      },
+    ],
   },
 ];
 
