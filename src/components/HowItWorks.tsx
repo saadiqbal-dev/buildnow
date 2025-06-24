@@ -45,7 +45,7 @@ export default function HowItWorks() {
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-0 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 px-0 md:px-20">
           {steps.map((step) => (
             <div
               key={step.step}
