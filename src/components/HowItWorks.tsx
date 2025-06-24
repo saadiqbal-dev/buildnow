@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <div className=" py-20 flex flex-col gap-20 bg-[#E3E0DC]">
+    <div className=" py-20 px-3 md:px-0 flex flex-col gap-20 bg-[#E3E0DC]">
       <div className="flex flex-col gap-4 items-center justify-center bg-[#E3E0DC]">
         <div className="px-3 py-2 rounded-full bg-[white] text-gray-800 text-sm font-medium inline-block">
           <p>How It Works</p>
@@ -45,7 +45,7 @@ export default function HowItWorks() {
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-3 md:px-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-0 md:px-20">
           {steps.map((step) => (
             <div
               key={step.step}
