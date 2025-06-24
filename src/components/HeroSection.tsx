@@ -35,7 +35,7 @@ export default function HeroSection() {
           </p>
 
           {/* Call-to-action buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex md:flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg">Sign Up</Button>
             <Button variant="outline" size="lg">
               Contact Sales
