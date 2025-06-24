@@ -36,9 +36,9 @@ export default function HeroSection() {
 
           {/* Call-to-action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg">Start Building Your AI Team</Button>
+            <Button size="lg">Sign Up</Button>
             <Button variant="outline" size="lg">
-              Watch Demo
+              Contact Sales
             </Button>
           </div>
         </div>

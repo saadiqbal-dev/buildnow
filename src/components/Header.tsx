@@ -106,8 +106,8 @@ export default function Header() {
             </nav>
           </div>
           <div className=" gap-4 hidden md:flex">
-            <Button>Contact Sales</Button>
-            <Button variant="outline">Get Started</Button>
+            <Button variant={"outline"}>Contact Sales</Button>
+            <Button>Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
