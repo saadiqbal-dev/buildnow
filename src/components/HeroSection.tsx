@@ -35,9 +35,11 @@ export default function HeroSection() {
           </p>
 
           {/* Call-to-action buttons */}
-          <div className="flex md:flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg">Sign Up</Button>
-            <Button variant="outline" size="lg">
+          <div className="flex flex-col sm:flex-row gap-4 px-4 justify-center items-center">
+            <Button className="w-full" size="lg">
+              Sign Up
+            </Button>
+            <Button className="w-full" variant="outline" size="lg">
               Contact Sales
             </Button>
           </div>
