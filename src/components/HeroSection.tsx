@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Threads from "./ui/threads";
+// import Threads from "./ui/threads";
 import DashboardImage from "/assets/dashboard.png";
 
 export default function HeroSection() {
