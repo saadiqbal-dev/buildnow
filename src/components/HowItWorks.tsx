@@ -35,7 +35,7 @@ export default function HowItWorks() {
           <p>How It Works</p>
         </div>
         <div className="text-center flex flex-col gap-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-black">
+          <h2 className="text-4xl md:text-5xl font-light text-black">
             Build Your Team of AI Phone Agents
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ export default function HowItWorks() {
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-4 gap-3 px-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-3 md:px-20">
           {steps.map((step) => (
             <div
               key={step.step}

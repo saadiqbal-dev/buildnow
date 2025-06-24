@@ -169,7 +169,7 @@ export default function UseCasesSection() {
           <p>Use Cases</p>
         </div>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
             Transform your customer experience
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

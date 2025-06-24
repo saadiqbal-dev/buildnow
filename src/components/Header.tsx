@@ -57,11 +57,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#FFF] shadow-sm border-b">
+    <header className="bg-[#F4F2EC] shadow-sm border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center justify-start gap-6">
+          <div className="flex items-center justify-start gap-10">
             <div>
               <Link to="/" className="text-2xl font-bold text-black">
                 Buildnow AI
@@ -105,7 +105,7 @@ export default function Header() {
               ))}
             </nav>
           </div>
-          <div className="flex gap-4">
+          <div className=" gap-4 hidden md:flex">
             <Button>Contact Sales</Button>
             <Button variant="outline">Get Started</Button>
           </div>
@@ -165,6 +165,10 @@ export default function Header() {
                 )}
               </div>
             ))}
+            <div className=" gap-2 w-full flex flex-col">
+              <Button>Contact Sales</Button>
+              <Button variant="outline">Get Started</Button>
+            </div>
           </nav>
         )}
       </div>
