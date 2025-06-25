@@ -6,21 +6,21 @@ const trainingFeatures = [
     title: "Instant Video Answers",
     description:
       "Whenever an employee asks a question, they get an instant video answer guiding them in the right direction. No more sifting through manuals or waiting on busy team leads—just instant, on-demand guidance.",
-    videoUrl: "/videos/instant-answers.mp4",
+    videoUrl: "/assets/videos/bring-trainings-to-life/video-generation.mp4",
   },
   {
     id: 2,
     title: "AI Avatars & AI Voices",
     description:
       "Choose from our diverse library of AI avatars and AI voices to personalize your training experience. Create your own AI avatar & clone your own AI voice!",
-    videoUrl: "/videos/ai-avatars.mp4",
+    videoUrl: "/assets/videos/bring-trainings-to-life/ai-avatar.mp4",
   },
   {
     id: 3,
     title: "Translate Trainings into 100+ Languages",
     description:
       "Quickly translate your videos into over 100 languages and select the perfect voice for each locale. Reach your teams all around the world!",
-    videoUrl: "/videos/translate-training.mp4",
+    videoUrl: "/assets/videos/bring-trainings-to-life/translation.mp4",
   },
 ];
 
