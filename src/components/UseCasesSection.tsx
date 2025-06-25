@@ -5,29 +5,32 @@ const useCases = [
   {
     id: 1,
     title: "Receptionist",
-    description: "Law firm receptionist",
+    description:
+      "Answer calls 24/7, greet callers, route them to the right person when possible, and schedule follow-ups if staff are unavailable.",
     audioUrl: "/audio/receptionist-demo.mp3",
     icon: <File />,
   },
   {
     id: 2,
     title: "Scheduling Appointments",
-    description: "Real estate warehouse booking, we saw you expressed interest",
+    description:
+      "Instantly trigger calls when a lead expresses interest, qualify the lead, and schedule appointments directly into your CRM and calendar.",
     audioUrl: "/audio/appointment-demo.mp3",
     icon: <Calendar />,
   },
   {
     id: 3,
     title: "Lead Qualification",
-    description: "PI Law firm",
+    description:
+      "Screen incoming calls by asking essential questions and qualifying leads in real time to streamline your intake process.",
     audioUrl: "/audio/lead-qualification-demo.mp3",
     icon: <File />,
   },
   {
     id: 4,
-    title: "Outbound Sales",
+    title: "Outbound Campaign",
     description:
-      "Hey wanted check if you wanted to upgrade service for another month",
+      "Proactively reach out to existing customers with special offers or service upgrades to drive repeat business.",
     audioUrl: "/audio/outbound-demo.mp3",
     icon: <File />,
   },
@@ -35,14 +38,15 @@ const useCases = [
     id: 5,
     title: "Surveys",
     description:
-      "Hey how are you liking the service we provided? Would you recommend us to friends",
+      "Run post-interaction surveys to measure customer sentiment and identify areas for improvement.",
     audioUrl: "/audio/survey-demo.mp3",
     icon: <File />,
   },
   {
     id: 6,
     title: "Debt Collection",
-    description: "Utilities negotiate payment",
+    description:
+      "Call customers with automated payment reminders and even negotiate payment terms to help resolve outstanding balances.",
     audioUrl: "/audio/debt-collection-demo.mp3",
     icon: <File />,
   },

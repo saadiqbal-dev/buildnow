@@ -4,6 +4,7 @@ import TrustedBySection from "@/components/TrustedBySection";
 import UseCasesSection from "@/components/UseCasesSection";
 import AiVideoTrainerSection from "@/components/AiVideoTrainerSection";
 import IntegrationsSection from "@/components/HowItWorks";
+import CTA from "@/components/CTA";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,6 +18,7 @@ function Index() {
       <UseCasesSection />
       <IntegrationsSection />
       <AiVideoTrainerSection />
+      <CTA />
     </div>
   );
 }

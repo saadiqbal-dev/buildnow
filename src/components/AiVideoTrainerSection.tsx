@@ -29,7 +29,7 @@ const securityFeatures = [
     id: 1,
     title: "Supervision",
     description:
-      "Guardrails ensure your agent stays on-topic, and real-time monitoring tracks live interactions.",
+      "Built-in guardrails keep AI on-topic, while real-time monitoring provides visibility into every interaction.",
   },
   {
     id: 2,
@@ -141,7 +141,7 @@ export default function AiVideoTrainerSection() {
             <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
               Build Enterprise Grade Agents You Can Trust
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-5xl mx-auto mb-8">
               Buildnow AI’s team was building AI safety solutions before ChatGPT
               existed. We were among the first in the world to discover prompt
               injections. Our platform is built with the highest commitment to
