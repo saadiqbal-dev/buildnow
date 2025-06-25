@@ -4,21 +4,21 @@ const steps = [
     title: "Build",
     description:
       "Use our agent builder to customize your AI voice agent with your knowledge base, scripts, CRM, and integrations like Zapier and HubSpot.",
-    img: "/assets/step-1.png",
+    video: "/assets/videos/how-it-works/step-1-video.mp4",
   },
   {
     step: 2,
     title: "Test and Deploy",
     description:
       "Run simulations to test accuracy, compliance, and brand alignment so your agent performs as expected.",
-    img: "/assets/step-2.png",
+    video: "/assets/videos/how-it-works/step-2-video.mp4",
   },
   {
     step: 3,
     title: "Monitor",
     description:
       "Track call success, sentiment, latency, and transcripts in one dashboard to improve agent performance.",
-    img: "/assets/step-3.png",
+    video: "/assets/videos/how-it-works/step-3-video.mp4",
   },
   // {
   //   step: 4,
@@ -59,7 +59,14 @@ export default function HowItWorks() {
               </div>
               <h3 className="text-2xl font-light">{step.title}</h3>
               <p className="text-gray-600 text-start">{step.description}</p>
-              <img src={step.img} className="w-full h-auto mt-4 rounded-lg" />
+              {/* <img src={step.img} className="w-full h-auto mt-4 rounded-lg" /> */}
+              <video
+                src={step.video}
+                className="w-full h-auto mt-4 rounded-lg"
+                autoPlay
+                muted
+                loop
+              />
             </div>
           ))}
         </div>
