@@ -139,12 +139,14 @@ export default function AiVideoTrainerSection() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
-              Safe and Secure
+              Build Enterprise Grade Agents You Can Trust
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Sierra is designed with the highest commitment to trust, security,
-              and compliance. Your AI agent won't pretend to be something it's
-              not, and it will be honest about its limitations.
+              Buildnow AI’s team was building AI safety solutions before ChatGPT
+              existed. We were among the first in the world to discover prompt
+              injections. Our platform is built with the highest commitment to
+              trust, safety, and compliance. Your AI agent will always be
+              upfront about what it can and cannot do.
             </p>
           </div>
 

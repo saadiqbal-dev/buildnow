@@ -9,15 +9,15 @@ const Routes = [
     children: [
       {
         title: "AI Phone Agents",
-        slug: "/products/ai-phone-agents",
+        slug: "/platform/ai-phone-agent",
       },
       {
         title: "AI Video Training",
-        slug: "/products/ai-video-training",
+        slug: "/platform/video-generation",
       },
       {
         title: "AI Trainer",
-        slug: "/products/ai-trainer",
+        slug: "/platform/ai-trainer",
       },
     ],
   },

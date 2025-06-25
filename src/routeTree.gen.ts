@@ -9,21 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as CompanyRouteImport } from './routes/company'
+import { Route as PlatformRouteRouteImport } from './routes/platform/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProductsIndexRouteImport } from './routes/products.index'
-import { Route as ProductsVideoGenerationRouteImport } from './routes/products.video-generation'
-import { Route as ProductsAiTrainerRouteImport } from './routes/products.ai-trainer'
-import { Route as ProductsAiPhoneAgentRouteImport } from './routes/products.ai-phone-agent'
+import { Route as PlatformIndexRouteImport } from './routes/platform/index'
+import { Route as PlatformVideoGenerationRouteImport } from './routes/platform/video-generation'
+import { Route as PlatformAiTrainerRouteImport } from './routes/platform/ai-trainer'
+import { Route as PlatformAiPhoneAgentRouteImport } from './routes/platform/ai-phone-agent'
 
-const ProductsRoute = ProductsRouteImport.update({
-  id: '/products',
-  path: '/products',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -39,117 +34,115 @@ const CompanyRoute = CompanyRouteImport.update({
   path: '/company',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlatformRouteRoute = PlatformRouteRouteImport.update({
+  id: '/platform',
+  path: '/platform',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsIndexRoute = ProductsIndexRouteImport.update({
+const PlatformIndexRoute = PlatformIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => ProductsRoute,
+  getParentRoute: () => PlatformRouteRoute,
 } as any)
-const ProductsVideoGenerationRoute = ProductsVideoGenerationRouteImport.update({
+const PlatformVideoGenerationRoute = PlatformVideoGenerationRouteImport.update({
   id: '/video-generation',
   path: '/video-generation',
-  getParentRoute: () => ProductsRoute,
+  getParentRoute: () => PlatformRouteRoute,
 } as any)
-const ProductsAiTrainerRoute = ProductsAiTrainerRouteImport.update({
+const PlatformAiTrainerRoute = PlatformAiTrainerRouteImport.update({
   id: '/ai-trainer',
   path: '/ai-trainer',
-  getParentRoute: () => ProductsRoute,
+  getParentRoute: () => PlatformRouteRoute,
 } as any)
-const ProductsAiPhoneAgentRoute = ProductsAiPhoneAgentRouteImport.update({
+const PlatformAiPhoneAgentRoute = PlatformAiPhoneAgentRouteImport.update({
   id: '/ai-phone-agent',
   path: '/ai-phone-agent',
-  getParentRoute: () => ProductsRoute,
+  getParentRoute: () => PlatformRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/platform': typeof PlatformRouteRouteWithChildren
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
-  '/products': typeof ProductsRouteWithChildren
-  '/products/ai-phone-agent': typeof ProductsAiPhoneAgentRoute
-  '/products/ai-trainer': typeof ProductsAiTrainerRoute
-  '/products/video-generation': typeof ProductsVideoGenerationRoute
-  '/products/': typeof ProductsIndexRoute
+  '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
+  '/platform/ai-trainer': typeof PlatformAiTrainerRoute
+  '/platform/video-generation': typeof PlatformVideoGenerationRoute
+  '/platform/': typeof PlatformIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
-  '/products/ai-phone-agent': typeof ProductsAiPhoneAgentRoute
-  '/products/ai-trainer': typeof ProductsAiTrainerRoute
-  '/products/video-generation': typeof ProductsVideoGenerationRoute
-  '/products': typeof ProductsIndexRoute
+  '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
+  '/platform/ai-trainer': typeof PlatformAiTrainerRoute
+  '/platform/video-generation': typeof PlatformVideoGenerationRoute
+  '/platform': typeof PlatformIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/platform': typeof PlatformRouteRouteWithChildren
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
-  '/products': typeof ProductsRouteWithChildren
-  '/products/ai-phone-agent': typeof ProductsAiPhoneAgentRoute
-  '/products/ai-trainer': typeof ProductsAiTrainerRoute
-  '/products/video-generation': typeof ProductsVideoGenerationRoute
-  '/products/': typeof ProductsIndexRoute
+  '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
+  '/platform/ai-trainer': typeof PlatformAiTrainerRoute
+  '/platform/video-generation': typeof PlatformVideoGenerationRoute
+  '/platform/': typeof PlatformIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/platform'
     | '/company'
     | '/integrations'
     | '/pricing'
-    | '/products'
-    | '/products/ai-phone-agent'
-    | '/products/ai-trainer'
-    | '/products/video-generation'
-    | '/products/'
+    | '/platform/ai-phone-agent'
+    | '/platform/ai-trainer'
+    | '/platform/video-generation'
+    | '/platform/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/company'
     | '/integrations'
     | '/pricing'
-    | '/products/ai-phone-agent'
-    | '/products/ai-trainer'
-    | '/products/video-generation'
-    | '/products'
+    | '/platform/ai-phone-agent'
+    | '/platform/ai-trainer'
+    | '/platform/video-generation'
+    | '/platform'
   id:
     | '__root__'
     | '/'
+    | '/platform'
     | '/company'
     | '/integrations'
     | '/pricing'
-    | '/products'
-    | '/products/ai-phone-agent'
-    | '/products/ai-trainer'
-    | '/products/video-generation'
-    | '/products/'
+    | '/platform/ai-phone-agent'
+    | '/platform/ai-trainer'
+    | '/platform/video-generation'
+    | '/platform/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PlatformRouteRoute: typeof PlatformRouteRouteWithChildren
   CompanyRoute: typeof CompanyRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
-  ProductsRoute: typeof ProductsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/products': {
-      id: '/products'
-      path: '/products'
-      fullPath: '/products'
-      preLoaderRoute: typeof ProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -171,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/platform': {
+      id: '/platform'
+      path: '/platform'
+      fullPath: '/platform'
+      preLoaderRoute: typeof PlatformRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -178,61 +178,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/': {
-      id: '/products/'
+    '/platform/': {
+      id: '/platform/'
       path: '/'
-      fullPath: '/products/'
-      preLoaderRoute: typeof ProductsIndexRouteImport
-      parentRoute: typeof ProductsRoute
+      fullPath: '/platform/'
+      preLoaderRoute: typeof PlatformIndexRouteImport
+      parentRoute: typeof PlatformRouteRoute
     }
-    '/products/video-generation': {
-      id: '/products/video-generation'
+    '/platform/video-generation': {
+      id: '/platform/video-generation'
       path: '/video-generation'
-      fullPath: '/products/video-generation'
-      preLoaderRoute: typeof ProductsVideoGenerationRouteImport
-      parentRoute: typeof ProductsRoute
+      fullPath: '/platform/video-generation'
+      preLoaderRoute: typeof PlatformVideoGenerationRouteImport
+      parentRoute: typeof PlatformRouteRoute
     }
-    '/products/ai-trainer': {
-      id: '/products/ai-trainer'
+    '/platform/ai-trainer': {
+      id: '/platform/ai-trainer'
       path: '/ai-trainer'
-      fullPath: '/products/ai-trainer'
-      preLoaderRoute: typeof ProductsAiTrainerRouteImport
-      parentRoute: typeof ProductsRoute
+      fullPath: '/platform/ai-trainer'
+      preLoaderRoute: typeof PlatformAiTrainerRouteImport
+      parentRoute: typeof PlatformRouteRoute
     }
-    '/products/ai-phone-agent': {
-      id: '/products/ai-phone-agent'
+    '/platform/ai-phone-agent': {
+      id: '/platform/ai-phone-agent'
       path: '/ai-phone-agent'
-      fullPath: '/products/ai-phone-agent'
-      preLoaderRoute: typeof ProductsAiPhoneAgentRouteImport
-      parentRoute: typeof ProductsRoute
+      fullPath: '/platform/ai-phone-agent'
+      preLoaderRoute: typeof PlatformAiPhoneAgentRouteImport
+      parentRoute: typeof PlatformRouteRoute
     }
   }
 }
 
-interface ProductsRouteChildren {
-  ProductsAiPhoneAgentRoute: typeof ProductsAiPhoneAgentRoute
-  ProductsAiTrainerRoute: typeof ProductsAiTrainerRoute
-  ProductsVideoGenerationRoute: typeof ProductsVideoGenerationRoute
-  ProductsIndexRoute: typeof ProductsIndexRoute
+interface PlatformRouteRouteChildren {
+  PlatformAiPhoneAgentRoute: typeof PlatformAiPhoneAgentRoute
+  PlatformAiTrainerRoute: typeof PlatformAiTrainerRoute
+  PlatformVideoGenerationRoute: typeof PlatformVideoGenerationRoute
+  PlatformIndexRoute: typeof PlatformIndexRoute
 }
 
-const ProductsRouteChildren: ProductsRouteChildren = {
-  ProductsAiPhoneAgentRoute: ProductsAiPhoneAgentRoute,
-  ProductsAiTrainerRoute: ProductsAiTrainerRoute,
-  ProductsVideoGenerationRoute: ProductsVideoGenerationRoute,
-  ProductsIndexRoute: ProductsIndexRoute,
+const PlatformRouteRouteChildren: PlatformRouteRouteChildren = {
+  PlatformAiPhoneAgentRoute: PlatformAiPhoneAgentRoute,
+  PlatformAiTrainerRoute: PlatformAiTrainerRoute,
+  PlatformVideoGenerationRoute: PlatformVideoGenerationRoute,
+  PlatformIndexRoute: PlatformIndexRoute,
 }
 
-const ProductsRouteWithChildren = ProductsRoute._addFileChildren(
-  ProductsRouteChildren,
+const PlatformRouteRouteWithChildren = PlatformRouteRoute._addFileChildren(
+  PlatformRouteRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PlatformRouteRoute: PlatformRouteRouteWithChildren,
   CompanyRoute: CompanyRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
-  ProductsRoute: ProductsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

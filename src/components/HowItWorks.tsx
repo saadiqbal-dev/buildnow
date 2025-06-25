@@ -1,30 +1,32 @@
 const steps = [
   {
     step: 1,
-    title: "Create Your AI Agent",
-    description: "Customize your agent with one of our templates",
+    title: "Build",
+    description:
+      "Use our agent builder to customize your AI voice agent with your knowledge base, scripts, CRM, and integrations like Zapier and HubSpot.",
     img: "/assets/step-1.png",
   },
   {
     step: 2,
     title: "Test and Deploy",
     description:
-      "Perform testing to ensure it can handle edge cases and deploy easily",
+      "Run simulations to test accuracy, compliance, and brand alignment so your agent performs as expected.",
     img: "/assets/step-2.png",
   },
   {
     step: 3,
     title: "Monitor",
-    description: "See all stats, call history and progress in the dashboard",
+    description:
+      "Track call success, sentiment, latency, and transcripts in one dashboard to improve agent performance.",
     img: "/assets/step-3.png",
   },
-  {
-    step: 4,
-    title: "Grow and Improve",
-    description:
-      "Generate Leads, improve your agent with AI Video Trainings and more",
-    img: "/assets/step-4.png",
-  },
+  // {
+  //   step: 4,
+  //   title: "Grow and Improve",
+  //   description:
+  //     "Generate Leads, improve your agent with AI Video Trainings and more",
+  //   img: "/assets/step-4.png",
+  // },
 ];
 
 export default function HowItWorks() {
@@ -38,14 +40,15 @@ export default function HowItWorks() {
           <h2 className="text-4xl md:text-5xl font-light text-black">
             Build Your Team of AI Phone Agents
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your team of AI Phone Agents is available 24/7 to solve problems,
-            provide answers, and take action.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Buildnow AI’s platform makes it easy for you to build AI voice
+            agents that can be personalized for both inbound and outbound calls,
+            helping you better serve your customers.
           </p>
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 px-0 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-0 md:px-20">
           {steps.map((step) => (
             <div
               key={step.step}
