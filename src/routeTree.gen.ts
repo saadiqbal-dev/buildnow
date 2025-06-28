@@ -18,6 +18,7 @@ import { Route as PlatformIndexRouteImport } from './routes/platform/index'
 import { Route as PlatformVideoGenerationRouteImport } from './routes/platform/video-generation'
 import { Route as PlatformAiTrainerRouteImport } from './routes/platform/ai-trainer'
 import { Route as PlatformAiPhoneAgentRouteImport } from './routes/platform/ai-phone-agent'
+import { Route as IndustriesUtilitiesRouteImport } from './routes/industries/utilities'
 
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
@@ -64,6 +65,11 @@ const PlatformAiPhoneAgentRoute = PlatformAiPhoneAgentRouteImport.update({
   path: '/ai-phone-agent',
   getParentRoute: () => PlatformRouteRoute,
 } as any)
+const IndustriesUtilitiesRoute = IndustriesUtilitiesRouteImport.update({
+  id: '/industries/utilities',
+  path: '/industries/utilities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
   '/platform/ai-trainer': typeof PlatformAiTrainerRoute
   '/platform/video-generation': typeof PlatformVideoGenerationRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
   '/platform/ai-trainer': typeof PlatformAiTrainerRoute
   '/platform/video-generation': typeof PlatformVideoGenerationRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
   '/platform/ai-trainer': typeof PlatformAiTrainerRoute
   '/platform/video-generation': typeof PlatformVideoGenerationRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/integrations'
     | '/pricing'
+    | '/industries/utilities'
     | '/platform/ai-phone-agent'
     | '/platform/ai-trainer'
     | '/platform/video-generation'
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/integrations'
     | '/pricing'
+    | '/industries/utilities'
     | '/platform/ai-phone-agent'
     | '/platform/ai-trainer'
     | '/platform/video-generation'
@@ -127,6 +138,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/integrations'
     | '/pricing'
+    | '/industries/utilities'
     | '/platform/ai-phone-agent'
     | '/platform/ai-trainer'
     | '/platform/video-generation'
@@ -139,6 +151,7 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
+  IndustriesUtilitiesRoute: typeof IndustriesUtilitiesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -206,6 +219,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlatformAiPhoneAgentRouteImport
       parentRoute: typeof PlatformRouteRoute
     }
+    '/industries/utilities': {
+      id: '/industries/utilities'
+      path: '/industries/utilities'
+      fullPath: '/industries/utilities'
+      preLoaderRoute: typeof IndustriesUtilitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -233,6 +253,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
+  IndustriesUtilitiesRoute: IndustriesUtilitiesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
