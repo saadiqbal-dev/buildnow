@@ -20,7 +20,7 @@ const trainingFeatures = [
     title: "Translate Trainings into 100+ Languages",
     description:
       "Quickly translate your videos into over 100 languages and select the perfect voice for each locale. Reach your teams all around the world!",
-    videoUrl: "/assets/videos/bring-trainings-to-life/translation.mp4",
+    videoUrl: "/assets/videos/bring-trainings-to-life/ai-translation.mp4",
   },
 ];
 
