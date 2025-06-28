@@ -36,7 +36,7 @@ export default function UseCases() {
     <div className="bg-gray-50 py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-neutral-800 mb-4">AI Phone Agent Use Cases</h2>
+          <center><h2 className="text-3xl text-neutral-800 mb-4" style={{fontSize:'44px', justifyContent:'center', width:'55%'}}>Elevate your customer experience with conversational AI</h2></center>
           <p className="text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
             Explore how our AI agents streamline workflows and boost efficiency.
           </p>

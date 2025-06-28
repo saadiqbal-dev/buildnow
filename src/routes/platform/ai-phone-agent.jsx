@@ -5,7 +5,6 @@ import UseCases from "@/components/PhoneAgentComponents/UseCases";
 function AiPhoneAgent() {
   return (
     <div>
-      <Hero />
       <UseCases />
     </div>
   );
