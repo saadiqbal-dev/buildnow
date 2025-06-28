@@ -1,0 +1,1 @@
+import{j as t}from"./index-BBOe2iJT.js";const r=function(){return t.jsx("div",{className:"text-center py-8",children:t.jsx("p",{className:"text-lg text-gray-600",children:"Select a product above to learn more about our AI-powered solutions."})})};export{r as component};
