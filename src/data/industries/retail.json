@@ -1,0 +1,81 @@
+{
+  "industry": "Legal",
+  "title": "Your trusted AI Agent for Retail and Consumer Goods",
+  "subtitle": "Empower every shopper with AI that feels human and drives real results",
+  "videoSrc": "",
+  "mainSection": {
+    "title": "Convert shoppers faster and keep them coming back",
+    "subtitle": "Buildnow AI helps retail brands increase conversions, resolve support requests instantly, and deliver personalized experiences with AI voice and video agents across the entire customer journey.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+        "title": "Pre-purchase product guidance",
+        "description": "AI agents instantly answer product questions about size, style, ingredients, availability, or compatibility. This improves conversion rates, reduces abandoned carts, and builds shopper confidence."
+      },
+      {
+        "icon": "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+        "title": "Order tracking and returns automation",
+        "description": "Customers can check order status, start returns or exchanges, and process refunds without waiting on hold. This reduces support volume while delivering a seamless post-purchase experience."
+      },
+      {
+        "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "title": "Account updates and subscription support",
+        "description": "Allow customers to update shipping info, payment methods, or subscription preferences. Present tailored upsell and retention offers to increase customer lifetime value."
+      }
+        ],
+    "sideImage": ""
+  },
+  "ctaSection": {
+    "title": "See Buildnow AI in action",
+    "description": "Explore our demo to watch AI agents guide product discovery, assist with orders, and drive repeat purchases. Sign in to test it yourself.",
+    "buttonText": "Watch Legal Demo"
+  },
+  "secondarySection": {
+    "title": "Deliver exceptional retail experiences at scale",
+    "subtitle": "Built for ecommerce brands and consumer companies that want to grow while maintaining exceptional customer service.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+        "title": "Brand-aligned, conversational AI",
+        "description": "Every interaction feels like it came from your best store associate. Your AI agent reflects your brand voice and pulls from CRM, product catalogs, and inventory systems to give accurate, contextual answers."
+      },
+      {
+        "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        "title": "Agile, campaign-ready platform",
+        "description": "Roll out flash sales, promotions, or seasonal updates instantly. When a question is too complex, seamlessly transfer to a live agent with full context."
+      },
+      {
+        "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+        "title": "Secure and customer-first by design",
+        "description": "Protect shopper data with built-in privacy tools, encryption, and ongoing quality assurance. Maintain control with approved scripts, monitoring, and customizable workflows."
+      }
+    ],
+    "sideImage": ""
+  },
+  "testimonialsSection": {
+    "title": "Trusted by legal professionals",
+    "subtitle": "Law firms of all sizes rely on our AI solutions to improve efficiency and client service.",
+    "buttonText": "View Success Stories",
+    "testimonials": [
+      {
+        "imageSrc": "",
+        "description": "How Morrison & Associates reduced document review time by 70% while maintaining accuracy standards."
+      },
+      {
+        "imageSrc": "",
+        "description": "How Legal Partners LLP improved client response times by 90% with AI-powered communication tools."
+      },
+      {
+        "imageSrc": "",
+        "description": "How Corporate Law Group streamlined contract generation and reduced drafting costs by 60%."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Build your team of AI Voice Aagents",
+    "description": "Join forward-thinking law firms using AI to deliver better client outcomes while improving operational efficiency.",
+    "buttonText": "Get Started"
+  }
+}

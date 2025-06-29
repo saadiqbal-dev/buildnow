@@ -20,7 +20,9 @@ import { Route as PlatformAiTrainerRouteImport } from './routes/platform/ai-trai
 import { Route as PlatformAiPhoneAgentRouteImport } from './routes/platform/ai-phone-agent'
 import { Route as IndustriesUtilitiesRouteImport } from './routes/industries/utilities'
 import { Route as IndustriesTelecommunicationsRouteImport } from './routes/industries/telecommunications'
+import { Route as IndustriesRetailRouteImport } from './routes/industries/retail'
 import { Route as IndustriesLegalRouteImport } from './routes/industries/legal'
+import { Route as IndustriesDebtCollectionRouteImport } from './routes/industries/debt-collection'
 import { Route as IndustriesCallCentersRouteImport } from './routes/industries/call-centers'
 
 const PricingRoute = PricingRouteImport.update({
@@ -79,11 +81,22 @@ const IndustriesTelecommunicationsRoute =
     path: '/industries/telecommunications',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesRetailRoute = IndustriesRetailRouteImport.update({
+  id: '/industries/retail',
+  path: '/industries/retail',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesLegalRoute = IndustriesLegalRouteImport.update({
   id: '/industries/legal',
   path: '/industries/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustriesDebtCollectionRoute =
+  IndustriesDebtCollectionRouteImport.update({
+    id: '/industries/debt-collection',
+    path: '/industries/debt-collection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesCallCentersRoute = IndustriesCallCentersRouteImport.update({
   id: '/industries/call-centers',
   path: '/industries/call-centers',
@@ -97,7 +110,9 @@ export interface FileRoutesByFullPath {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/industries/call-centers': typeof IndustriesCallCentersRoute
+  '/industries/debt-collection': typeof IndustriesDebtCollectionRoute
   '/industries/legal': typeof IndustriesLegalRoute
+  '/industries/retail': typeof IndustriesRetailRoute
   '/industries/telecommunications': typeof IndustriesTelecommunicationsRoute
   '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
@@ -111,7 +126,9 @@ export interface FileRoutesByTo {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/industries/call-centers': typeof IndustriesCallCentersRoute
+  '/industries/debt-collection': typeof IndustriesDebtCollectionRoute
   '/industries/legal': typeof IndustriesLegalRoute
+  '/industries/retail': typeof IndustriesRetailRoute
   '/industries/telecommunications': typeof IndustriesTelecommunicationsRoute
   '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
@@ -127,7 +144,9 @@ export interface FileRoutesById {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/industries/call-centers': typeof IndustriesCallCentersRoute
+  '/industries/debt-collection': typeof IndustriesDebtCollectionRoute
   '/industries/legal': typeof IndustriesLegalRoute
+  '/industries/retail': typeof IndustriesRetailRoute
   '/industries/telecommunications': typeof IndustriesTelecommunicationsRoute
   '/industries/utilities': typeof IndustriesUtilitiesRoute
   '/platform/ai-phone-agent': typeof PlatformAiPhoneAgentRoute
@@ -144,7 +163,9 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/industries/call-centers'
+    | '/industries/debt-collection'
     | '/industries/legal'
+    | '/industries/retail'
     | '/industries/telecommunications'
     | '/industries/utilities'
     | '/platform/ai-phone-agent'
@@ -158,7 +179,9 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/industries/call-centers'
+    | '/industries/debt-collection'
     | '/industries/legal'
+    | '/industries/retail'
     | '/industries/telecommunications'
     | '/industries/utilities'
     | '/platform/ai-phone-agent'
@@ -173,7 +196,9 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/industries/call-centers'
+    | '/industries/debt-collection'
     | '/industries/legal'
+    | '/industries/retail'
     | '/industries/telecommunications'
     | '/industries/utilities'
     | '/platform/ai-phone-agent'
@@ -189,7 +214,9 @@ export interface RootRouteChildren {
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
   IndustriesCallCentersRoute: typeof IndustriesCallCentersRoute
+  IndustriesDebtCollectionRoute: typeof IndustriesDebtCollectionRoute
   IndustriesLegalRoute: typeof IndustriesLegalRoute
+  IndustriesRetailRoute: typeof IndustriesRetailRoute
   IndustriesTelecommunicationsRoute: typeof IndustriesTelecommunicationsRoute
   IndustriesUtilitiesRoute: typeof IndustriesUtilitiesRoute
 }
@@ -273,11 +300,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesTelecommunicationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries/retail': {
+      id: '/industries/retail'
+      path: '/industries/retail'
+      fullPath: '/industries/retail'
+      preLoaderRoute: typeof IndustriesRetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries/legal': {
       id: '/industries/legal'
       path: '/industries/legal'
       fullPath: '/industries/legal'
       preLoaderRoute: typeof IndustriesLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/debt-collection': {
+      id: '/industries/debt-collection'
+      path: '/industries/debt-collection'
+      fullPath: '/industries/debt-collection'
+      preLoaderRoute: typeof IndustriesDebtCollectionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries/call-centers': {
@@ -315,7 +356,9 @@ const rootRouteChildren: RootRouteChildren = {
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
   IndustriesCallCentersRoute: IndustriesCallCentersRoute,
+  IndustriesDebtCollectionRoute: IndustriesDebtCollectionRoute,
   IndustriesLegalRoute: IndustriesLegalRoute,
+  IndustriesRetailRoute: IndustriesRetailRoute,
   IndustriesTelecommunicationsRoute: IndustriesTelecommunicationsRoute,
   IndustriesUtilitiesRoute: IndustriesUtilitiesRoute,
 }

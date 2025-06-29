@@ -41,6 +41,14 @@ const Routes = [
         title: "Telecommunications",
         slug: "/industries/telecommunications",
       },
+      {
+        title: "Retail and Consumer Goods",
+        slug: "/industries/retail",
+      },
+      {
+        title: "Debt Collection",
+        slug: "/industries/debt-collection",
+      },
     ],
   },
   {
