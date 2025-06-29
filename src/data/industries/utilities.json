@@ -1,0 +1,81 @@
+{
+  "industry": "Utilities",
+  "title": "Your trusted AI Agent for Utilities",
+  "subtitle": "Ensure uninterrupted service, cut wait times and costs with 24/7 AI agents for billing, outages, and payments.",
+  "videoSrc": "",
+  "mainSection": {
+    "title": "Customer Service your customers can rely on",
+    "subtitle": "Instantly assist your customers with billing, outages, and service updates—24/7, personalized, and reliable.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M7 11H3V20H7M7 11V20M7 11L11 3H11.6156C12.843 3 13.7808 4.09535 13.5917 5.3081L13.0161 9H18.0631C19.8811 9 21.2813 10.6041 21.0356 12.4053L20.3538 17.4053C20.1511 18.8918 18.8815 20 17.3813 20H7",
+        "title": "Outage notifications & updates",
+        "description": "Proactively alert customers about service disruptions, estimated restoration times, and any safety measures—boosting trust and reducing inbound support tickets."
+      },
+      {
+        "icon": "M5 8.5H6M18 16.5H19M2 19.5V5.5H22V19.5H2ZM14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.3954 10.8954 10.5 12 10.5C13.1046 10.5 14 11.3954 14 12.5Z",
+        "title": "Billing & payment assistance",
+        "description": "Give instant answers on usage, payment due dates, and plan comparisons. Plus, guide customers through secureself‑service payment—reducing late payments and call volume."
+      },
+      {
+        "icon": "M5.85697 19.0779C7.17056 17.1589 9.33203 15.9121 12 15.9121C14.668 15.9121 16.8294 17.1589 18.143 19.0779M5.85697 19.0779C7.49061 20.53 9.6423 21.4121 12 21.4121C14.3577 21.4121 16.5094 20.53 18.143 19.0779M5.85697 19.0779C3.95086 17.3835 2.75 14.913 2.75 12.1621C2.75 7.05348 6.89137 2.91211 12 2.91211C17.1086 2.91211 21.25 7.05348 21.25 12.1621C21.25 14.913 20.0491 17.3835 18.143 19.0779M15.25 10.1621C15.25 11.957 13.7949 13.4121 12 13.4121C10.2051 13.4121 8.75 11.957 8.75 10.1621C8.75 8.36718 10.2051 6.91211 12 6.91211C13.7949 6.91211 15.25 8.36718 15.25 10.1621Z",
+        "title": "Account & service management",
+        "description": "Empower users to report issues, schedule meter readings, or modify services without a live agent—while maintaining upsell opportunities for renewable energy or efficiency programs."
+      }
+    ],
+    "sideImage": ""
+  },
+  "ctaSection": {
+    "title": "See Buildno AI in action",
+    "description": "Check out our demo for debt collection in utilities or see an AI agent handle outage questions — just sign in to the platform and test the agents yourself.",
+    "buttonText": "Watch Demo"
+  },
+  "secondarySection": {
+    "title": "Empower better customer experiences",
+    "subtitle": "Deploy your AI agent on a secure, scalable platform designed for utility-grade reliability and compliance",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M5.85697 19.0779C7.17056 17.1589 9.33203 15.9121 12 15.9121C14.668 15.9121 16.8294 17.1589 18.143 19.0779M5.85697 19.0779C7.49061 20.53 9.6423 21.4121 12 21.4121C14.3577 21.4121 16.5094 20.53 18.143 19.0779M5.85697 19.0779C3.95086 17.3835 2.75 14.913 2.75 12.1621C2.75 7.05348 6.89137 2.91211 12 2.91211C17.1086 2.91211 21.25 7.05348 21.25 12.1621C21.25 14.913 20.0491 17.3835 18.143 19.0779M15.25 10.1621C15.25 11.957 13.7949 13.4121 12 13.4121C10.2051 13.4121 8.75 11.957 8.75 10.1621C8.75 8.36718 10.2051 6.91211 12 6.91211C13.7949 6.91211 15.25 8.36718 15.25 10.1621Z",
+        "title": "Resolve issues with precision and empathy",
+        "description": "Offer swift, personalized responses through voice or chat. Our AI agents integrate seamlessly with your CIS, CRM, work orders, and outage systems to ensure real-time, contextual support."
+      },
+      {
+        "icon": "M5.85697 19.0779C7.17056 17.1589 9.33203 15.9121 12 15.9121C14.668 15.9121 16.8294 17.1589 18.143 19.0779M5.85697 19.0779C7.49061 20.53 9.6423 21.4121 12 21.4121C14.3577 21.4121 16.5094 20.53 18.143 19.0779M5.85697 19.0779C3.95086 17.3835 2.75 14.913 2.75 12.1621C2.75 7.05348 6.89137 2.91211 12 2.91211C17.1086 2.91211 21.25 7.05348 21.25 12.1621C21.25 14.913 20.0491 17.3835 18.143 19.0779M15.25 10.1621C15.25 11.957 13.7949 13.4121 12 13.4121C10.2051 13.4121 8.75 11.957 8.75 10.1621C8.75 8.36718 10.2051 6.91211 12 6.91211C13.7949 6.91211 15.25 8.36718 15.25 10.1621Z",
+        "title": "Scale seamlessly during peak demand",
+        "description": "From weather emergencies to billing cycles, easily manage support spikes without hiring. Automatically escalate complex cases to live agents with full context."
+      },
+      {
+        "icon": "M5.85697 19.0779C7.17056 17.1589 9.33203 15.9121 12 15.9121C14.668 15.9121 16.8294 17.1589 18.143 19.0779M5.85697 19.0779C7.49061 20.53 9.6423 21.4121 12 21.4121C14.3577 21.4121 16.5094 20.53 18.143 19.0779M5.85697 19.0779C3.95086 17.3835 2.75 14.913 2.75 12.1621C2.75 7.05348 6.89137 2.91211 12 2.91211C17.1086 2.91211 21.25 7.05348 21.25 12.1621C21.25 14.913 20.0491 17.3835 18.143 19.0779M15.25 10.1621C15.25 11.957 13.7949 13.4121 12 13.4121C10.2051 13.4121 8.75 11.957 8.75 10.1621C8.75 8.36718 10.2051 6.91211 12 6.91211C13.7949 6.91211 15.25 8.36718 15.25 10.1621Z",
+        "title": "Trustworthy & compliant by design",
+        "description": "Built‑in guardrails ensure secure handling of customer data. Monitor performance, set SLAs, and iterate agent behavior—all backed by privacy and reliability"
+      }
+    ],
+    "sideImage": ""
+  },
+  "testimonialsSection": {
+    "title": "The results speak for themselves",
+    "subtitle": "Industry leaders trust Sierra to build better customer experiences.",
+    "buttonText": "Our Customers",
+    "testimonials": [
+      {
+        "imageSrc": "",
+        "description": "How AG1 uses AI to empower customers with a daily health ritual."
+      },
+      {
+        "imageSrc": "",
+        "description": "How AG1 uses AI to empower customers with a daily health ritual."
+      },
+      {
+        "imageSrc": "",
+        "description": "How AG1 uses AI to empower customers with a daily health ritual."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Build your team of AI Voice Agents",
+    "description": "Learn how you can partner with Build Now to increase customer satisfaction and improve customer outcomes.",
+    "buttonText": "Get Started"
+  }
+}

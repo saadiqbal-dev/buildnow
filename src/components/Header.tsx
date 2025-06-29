@@ -23,7 +23,7 @@ const Routes = [
   },
   {
     title: "Industries",
-    slug: "/industries",
+    slug: "#",
     children: [
       {
         title: "Call Centers",

@@ -1,0 +1,90 @@
+{
+  "industry": "Legal",
+  "title": "Your trusted AI Agent for Law Firms",
+  "subtitle": "Accelerate client intake and never miss a qualified lead — powered by AI voice agents trained for personal injury law.",
+  "videoSrc": "",
+  "mainSection": {
+    "title": "Turn more inbound calls into signed cases",
+    "subtitle": "Buildnow AI helps personal injury law firms automate and scale client intake, lead qualification, and follow-ups — so your team can focus on winning cases, not chasing calls.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+        "title": "AI-powered intake 24/7",
+        "description": "Qualify new leads around the clock. Our AI agents ask the right questions, collect detailed case info, and route qualified leads to your intake team — instantly."
+      },
+      {
+        "icon": "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+        "title": "Legal research assistance",
+        "description": "Access comprehensive case law, statutes, and legal precedents instantly with AI-powered research tools that analyze millions of legal documents in seconds."
+      },
+      {
+        "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "title": "Follow-up & lead nurturing",
+        "description": "Automate follow-ups for leads who didn’t convert the first time. AI voice agents can re-engage potential clients via outbound calls or texts with personalized scripts."
+      },
+      {
+        "title": "Appointment booking & CRM updates",
+        "description": "AI agents can book consultations, send reminders, and update your intake software (Lead Docket, Filevine, Clio, etc.) — keeping your pipeline full and organized."
+
+      }
+    ],
+    "sideImage": ""
+  },
+  "ctaSection": {
+    "title": "See Buildnow AI in action",
+    "description": "Try our personal injury demo — listen to AI agents qualify real leads and respond to common legal intake questions. Just sign in and test it yourself.",
+    "buttonText": "Watch Legal Demo"
+  },
+  "secondarySection": {
+    "title": "Let your best intake agent work 24/7",
+    "subtitle": "Built for busy law firms that value speed, compliance, and client experience",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+        "title": "Trained on legal intake workflows",
+        "description": "Agents ask the right questions about car accidents, injuries, dates, insurance, and liability — so you never lose a lead to voicemail again."
+      },
+      {
+        "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        "title": "Time tracking automation",
+        "description": "Automatically track billable hours across different cases and clients with AI that categorizes activities and generates detailed time reports for accurate billing."
+      },
+      {
+        "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+        "title": "Respond faster than the competition",
+        "description": "AI agents answer every call instantly, follow up in minutes, and escalate only high-intent leads to your team."
+      },
+      {
+        "title": "Compliant & secure by design",
+        "description": "Built with TCPA compliance, HIPAA-aware protocols, and secure CRM integrations — so you can trust AI with sensitive information."
+      }
+    ],
+    "sideImage": ""
+  },
+  "testimonialsSection": {
+    "title": "Trusted by legal professionals",
+    "subtitle": "Law firms of all sizes rely on our AI solutions to improve efficiency and client service.",
+    "buttonText": "View Success Stories",
+    "testimonials": [
+      {
+        "imageSrc": "",
+        "description": "How Morrison & Associates reduced document review time by 70% while maintaining accuracy standards."
+      },
+      {
+        "imageSrc": "",
+        "description": "How Legal Partners LLP improved client response times by 90% with AI-powered communication tools."
+      },
+      {
+        "imageSrc": "",
+        "description": "How Corporate Law Group streamlined contract generation and reduced drafting costs by 60%."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Build your team of AI Voice Aagents",
+    "description": "Join forward-thinking law firms using AI to deliver better client outcomes while improving operational efficiency.",
+    "buttonText": "Get Started"
+  }
+}

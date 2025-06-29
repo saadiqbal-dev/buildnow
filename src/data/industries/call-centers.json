@@ -1,0 +1,81 @@
+{
+  "industry": "Call Centers",
+  "title": "Your Trusted Team of AI Agents for your Call Center",
+  "subtitle": "Build your own branded AI call center to service your clients with 24/7 conversational voice agents.",
+  "videoSrc": "",
+  "mainSection": {
+    "title": "Offer premium call center services—without building AI from scratch",
+    "subtitle": "White-label our platform to deliver AI voice agents under your brand for your end customers, enabling inbound support, outbound campaigns, lead qualification, appointment scheduling, and more.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+        "title": "Fully‑branded voice agents",
+        "description": "Customize every interaction with your own logos, tone, and domain—no white-labeling clues. Your agents become the face of your business"
+      },
+      {
+        "icon": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+        "title": "Inbound & outbound campaigns",
+        "description": "PRun proactive outreach (e.g. renewals, surveys, promotions) and support lines seamlessly—24/7 automated calls powered by natural-language AI in <500 ms"
+      },
+      {
+        "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+        "title": "Lead qualification & appointment booking",
+        "description": "Let AI filter and qualify leads, ask key questions, and schedule follow‑ups in your CRM—all under your own brand and management dashboard"
+      }
+    ],
+    "sideImage": ""
+  },
+  "ctaSection": {
+    "title": "See Buildnow AI in action",
+    "description": "Try our live call center demo—experience branded AI agents handling inbound queries, outbound campaigns, and booking flows. Just sign in and test them yourself.",
+    "buttonText": "Watch Demo"
+  },
+  "secondarySection": {
+    "title": "Scale your call center business—easily",
+    "subtitle": "Built on a secure, scalable platform:",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        "title": "Complete white‑label control",
+        "description": "Host the platform on your domain, customize branding, manage sub‑accounts and permissions via an agency dashboard"
+      },
+      {
+        "icon": "M13 10V3L4 14h7v7l9-11h-7z",
+        "title": "Launch campaigns instantly",
+        "description": "Deploy new voice agents and scripts with no-code tools; integrate with telephony systems and dialer workflows for global coverage."
+      },
+      {
+        "icon": "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+        "title": "Smart hand-off to human agents",
+        "description": "AI agents handle routine calls and escalate complex matters to live agents—passing full context and call history."
+      }
+    ],
+    "sideImage": ""
+  },
+  "testimonialsSection": {
+    "title": "Proven results across industries",
+    "subtitle": "Leading call centers trust our AI solutions to improve efficiency and customer satisfaction.",
+    "buttonText": "View Case Studies",
+    "testimonials": [
+      {
+        "imageSrc": "",
+        "description": "How TechSupport Pro reduced average call time by 40% while improving customer satisfaction scores."
+      },
+      {
+        "imageSrc": "",
+        "description": "How CustomerFirst increased first-call resolution rates by 60% with AI-powered agent assistance."
+      },
+      {
+        "imageSrc": "",
+        "description": "How GlobalHelp scaled to handle 3x more calls without increasing headcount using AI agents."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Build your team of AI Voice Agents",
+    "description": "Join hundreds of call centers already using AI to deliver better customer experiences while reducing operational costs.",
+    "buttonText": "Get Started"
+  }
+}

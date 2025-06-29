@@ -1,0 +1,81 @@
+{
+  "industry": "Telecommunications",
+  "title": "Your trusted AI Agent for Telecommunications",
+  "subtitle": "Acquire, engage, and retain more subscribers with intelligent campaigns and personalized support.",
+  "videoSrc": "",
+  "mainSection": {
+    "title": "Win more customers, maximize revenue, reduce churn",
+    "subtitle": "Empower your telecom business with targeted AI campaigns that upsell services, win back dormant subscribers, and confirm usage—delivered at scale and with precision.",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0",
+        "title": "Service upsells",
+        "description": "Recommend add‑on plans, device upgrades, or premium services based on customer usage and behavior—at peak moments in the customer journey."
+      },
+      {
+        "icon": "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
+        "title": "Win‑back campaigns",
+        "description": "Re‑engage lapsed customers with contextually timed offers tailored to previous habits—driving return and reducing churn."
+      },
+      {
+        "icon": "M12 18h.01M8 21l4-7 4 7M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z",
+        "title": "Usage confirmation",
+        "description": "Proactively notify customers when they reach thresholds or unused balances—building trust and prompting upgrades before issues escalate."
+      }
+    ],
+    "sideImage": ""
+  },
+  "ctaSection": {
+    "title": "See Buildnow AI in action",
+    "description": "Try our AI demo for telecom—see agents run live upsell campaigns, recover churned users, or confirm usage. Simply sign in and experience them yourself.",
+    "buttonText": "Watch Demo"
+  },
+  "secondarySection": {
+    "title": "Deliver personalized campaigns at scale",
+    "subtitle": "Built on a secure, scalable platform",
+    "imageSrc": "",
+    "bulletPoints": [
+      {
+        "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+        "title": "Data‑driven, customer‑focused interactions",
+        "description": "Our AI integrates with your CRM and usage analytics to automatically launch and personalize campaigns."
+      },
+      {
+        "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+        "title": "Effortless campaign rollouts",
+        "description": "Launch new service offers or win‑back sequences instantly—and adjust messaging or timing based on real‑time results."
+      },
+      {
+        "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "title": "Responsive automation with human backup",
+        "description": "Automatically escalate complex cases to live agents, armed with full interaction context for seamless hand‑off."
+      }
+    ],
+    "sideImage": ""
+  },
+  "testimonialsSection": {
+    "title": "Leading telecom providers choose us",
+    "subtitle": "Major telecommunications companies trust our AI solutions to improve customer experience and operational efficiency.",
+    "buttonText": "View Customer Stories",
+    "testimonials": [
+      {
+        "imageSrc": "",
+        "description": "How TeleConnect reduced customer service calls by 50% while improving satisfaction scores by 35%."
+      },
+      {
+        "imageSrc": "",
+        "description": "How NetworkPro automated 80% of routine technical support requests with AI-powered troubleshooting."
+      },
+      {
+        "imageSrc": "",
+        "description": "How MobileFirst increased plan upgrade conversions by 45% using AI-driven personalized recommendations."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Build your team of AI Voice Agents",
+    "description": "Join leading telecommunications providers using AI to deliver superior customer experiences while reducing operational costs.",
+    "buttonText": "Get Started"
+  }
+}
